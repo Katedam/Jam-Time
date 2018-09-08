@@ -63,6 +63,11 @@ nav a {
 section {
     background-color: var(--cream);
 }
-
-
-
+#about-contact-info {
+    margin-top: 45px;
+    display: flex;
+}
+#food-sources-info {
+    margin-top: 45px;
+    height: 600px;
+}

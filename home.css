@@ -1,49 +1,56 @@
 body {
-    background-color: var(--cream);
+    position: relative;
+    background-color: var(--purple);
 }
 #header-logo {
     position: relative;
-    left: 30%;
-    width: 30%;
-    background-color: var(--green);
-    padding: 10px 30px 10px 30px;
-    text-align: center;
+    width: 100%;
+    height: 500px;
     border-radius: 80px;
 }
 #header-logo .logo {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    color: var(--cream);
     margin-bottom: 0;
     margin-top: 0;
 }
 #header-logo h3 {
+    color: var(--cream);
     margin-top: 0;
+    position: relative;
+    top: 55%;
+    left: 55%;
 }
 nav {
-    background-color: var(--brown);
+    background-color: var(--purple);
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 2em;
-    padding: 10px 30px 0 30px;
-    margin-top: 5px;
-    width: 30%;
+    width: 100%;
+    padding-top: 10px;
     text-align: center;
-    position: relative;
-    left: 30%;
 }
 nav a {
     font-family:'Arimo', sans-serif;
     text-decoration: none;
     padding: 10px;
-    background-color: var(--brown);
     color: var(--cream);
 }
 #home-page-forms {
     display: flex;
+    background-color: var(--green);
+
     height: 300px;
     font-family:'Arimo', sans-serif;
 }
 #register {
-    background-color: var(--green);
     width: 70%;
 }
 #home-page-forms aside {
+    background-color: var(--brown);
     height: 300px;
 }
 
@@ -52,6 +59,9 @@ nav a {
 }
 #home-page-forms .guest {
     height: 100px;
+}
+section {
+    background-color: var(--cream);
 }
 
 

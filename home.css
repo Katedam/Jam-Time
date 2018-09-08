@@ -1,0 +1,58 @@
+body {
+    background-color: var(--cream);
+}
+#header-logo {
+    position: relative;
+    left: 30%;
+    width: 30%;
+    background-color: var(--green);
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    border-radius: 80px;
+}
+#header-logo .logo {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#header-logo h3 {
+    margin-top: 0;
+}
+nav {
+    background-color: var(--brown);
+    height: 2em;
+    padding: 10px 30px 0 30px;
+    margin-top: 5px;
+    width: 30%;
+    text-align: center;
+    position: relative;
+    left: 30%;
+}
+nav a {
+    font-family:'Arimo', sans-serif;
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--brown);
+    color: var(--cream);
+}
+#home-page-forms {
+    display: flex;
+    height: 300px;
+    font-family:'Arimo', sans-serif;
+}
+#register {
+    background-color: var(--green);
+    width: 70%;
+}
+#home-page-forms aside {
+    height: 300px;
+}
+
+#home-page-forms .login {
+    height: 161px;
+}
+#home-page-forms .guest {
+    height: 100px;
+}
+
+
+

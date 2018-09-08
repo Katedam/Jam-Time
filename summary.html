@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <title>Order Summary and Payment</title>
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <link rel="stylesheet" type="text/css" href="summary.css">
 </head>
 <body>
-    <!-- Do we want all of our h1s to be the same style? -->
-    <h1 class="heading">Order Summary</h1>
+    <h1>Order Summary</h1>
     <div id="summary-container">
         <ul id="sandwich-list">
             <!-- placeholder lis -->
@@ -18,7 +19,8 @@
         </ul>
     </div>
     <form id="address-form">
-        <input type="text">
+        <label for="address-field">Enter Your Address Here</label>
+        <input type="text" id="address-field" value="address-field">
     </form><br>
     <button>Order Sammy!(place order)</button>
 </body>

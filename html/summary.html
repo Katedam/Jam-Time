@@ -6,22 +6,28 @@
     <link rel="stylesheet" type="text/css" href="../css/summary.css">
 </head>
 <body>
-    <h1>Order Summary</h1>
-    <div id="summary-container">
-        <ul id="sandwich-list">
-            <!-- placeholder lis -->
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-    <form id="address-form">
-        <label for="address-field">Enter Your Address Here</label>
-        <input type="text" id="address-field" value="address-field">
-    </form><br>
-    <button>Order Sammy!(place order)</button>
+    <h1 id="header">Order Summary</h1>
+    <section id="finalize">
+        <fieldset id="summary-container">
+            <legend>Summary</legend>
+            <ul id="sandwich-list">
+                <!-- placeholder lis -->
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </fieldset>
+        <aside id="address-box">
+            <fieldset id="address">
+                <legend>Summary</legend>
+                <label for="address-field">Enter Your Address Here</label>
+                <input type="text" id="address-field" value="address-field">
+                <button id="order-button">Order Sammy!(place order)</button>
+            </fieldset>
+        </aside>
+    </section>
 </body>
 </html>

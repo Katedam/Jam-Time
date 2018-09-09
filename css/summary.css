@@ -1,3 +1,36 @@
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 100px;
+}
+
+#finalize {
+    display: flex;
+}
+
 #summary-container{
+    width: 50%;
+    right: 50%;
     border: solid 1px;
+    justify-content: flex-start;
+}
+
+#address-box {
+    display: flex;
+    /* border: solid 1px; */
+}
+
+#address {
+    width: 50%;
+    display: flex;
+}
+
+#order-button {
+    align-items: flex-end;
+    height: 40px;
 }

@@ -7,14 +7,22 @@
 </head>
 <body>
     <h1 id="header">Order Summary</h1>
+    <section id="instructions">
+        <div id="review">
+            <h3>Review Your Order here</h3>
+        </div>
+        <div id="where">
+            <h3>Tell Us Where To Send It Then press the button!</h3>
+        </div>
+    </section>
     <section id="finalize">
         <fieldset id="summary-container">
             <legend>Summary</legend>
             <ul id="sandwich-list">
                 <!-- placeholder lis -->
+                <!-- <li></li>
                 <li></li>
-                <li></li>
-                <li></li>
+                <li></li> -->
                 <li></li>
                 <li></li>
                 <li></li>
@@ -22,10 +30,12 @@
         </fieldset>
         <aside id="address-box">
             <fieldset id="address">
-                <legend>Summary</legend>
+                <legend>Address</legend>
                 <label for="address-field">Enter Your Address Here</label>
-                <input type="text" id="address-field" value="address-field">
-                <button id="order-button">Order Sammy!(place order)</button>
+                <input type="text" id="address-field" value="address-field"><br>
+                <div id="button">
+                    <button id="order-button">Order Sammy!(place order)</button>
+                </div>
             </fieldset>
         </aside>
     </section>

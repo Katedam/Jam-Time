@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Delius+Unicase:700|Freckle+Face|Arimo');
+:root {
+    --brown: #a08553;
+    --red: #701c39;
+    --purple: #561448;
+    --cream: #f8ffe8;
+    --green: #bce2c0;
+}
+h1 {
+    font-family: 'Freckle Face', sans-serif;
+    color: var(--purple);
+}
+.logo {
+    font-size: 82px;
+}
+h3 {
+    font-family: 'Delius Unicase', cursive;
+    color: var(--brown);
+}
+p {
+    font-family: 'Arimo', sans-serif;
+    color: var(--red);
+}
+    
+ 

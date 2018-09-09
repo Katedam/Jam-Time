@@ -1,0 +1,21 @@
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 100px;
+}
+
+#delivery-bike {
+    border: solid;
+    margin-top: 100px;
+}
+
+#bike {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}

@@ -11,4 +11,20 @@ addUserAccount = function() {
 }
 getRegistrationButton.addEventListener("click", addUserAccount);
 
-var getLoginButton = document.getElementById('');
+var getLoginButton = document.getElementById('loginButton');
+loadOrderPage = function(){ 
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    for (var index = 0; index < accounts.length; index++) {
+        if (username == accounts[index].username && password == accounts[index].password) {
+            window.location.href = '../html/orderpage.html';
+            break;
+        } else if (username !== accounts[index].username || password !== accounts[index].password) {
+            document.getElementById('not-a-match').innerText = "Username or password does not match";
+        } 
+    if (username == null || password == null) {
+        alert("Please fill out all required fields");
+    }
+}
+}
+getLoginButton.addEventListener("click", loadOrderPage);

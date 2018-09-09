@@ -1,3 +1,11 @@
+ body {
+    background: url(../assets/tuce-629552-unsplash.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+ }
 .heading {
     display: flex;
     align-items: center;
@@ -10,10 +18,18 @@
 
 #delivery-bike {
     border: solid;
-    margin-top: 100px;
+    background-color: rgba(128, 128, 128, .8);
+    /* opacity: 0.8; */
+    margin-top: 210px;
 }
 
+/* #delivery-bike .background {
+    background: gray;
+    opacity: 0.75;
+} */
+
 #bike {
+    opacity: 0.9;
     display: block;
     margin-left: auto;
     margin-right: auto;

@@ -1,3 +1,53 @@
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 100px;
+}
+
+#instructions {
+    display: flex;
+}
+
+#review {
+    justify-content: flex-start;
+    width: 52%;
+}
+
+#where {
+    justify-content: flex-end;
+    display: flex;
+}
+
+#finalize {
+    display: flex;
+}
+
 #summary-container{
+    width: 49%;
+    right: 50%;
     border: solid 1px;
+    justify-content: flex-start;
+}
+
+#address-box {
+    display: flex;
+    width: 50%;
+    right: 50%;
+}
+
+#address {
+    display: flex;
+    width: 100%;
+    right: 50%;
+}
+
+#button {
+    justify-content: flex-end;
+    display: flex;
+    height: 40px;
 }

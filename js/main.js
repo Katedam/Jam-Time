@@ -5,7 +5,7 @@ function UserAccount(username, password, first, last, phone, address) {
     this.firstName = first;
     this.phone = phone;
     this.address = address;
-    this.addSandwich = [];
+    this.favoriteSandwiches = [];
 };
 //array to store user account objects
 var accounts = [];
@@ -19,12 +19,12 @@ function Sandwich(bread, spreads, jams, toppings, cut) {
     this.cut = cut;
 }
 //add a new unique user account
-UserAccount.prototype.addAccount = function(username, password, first, last, phone, address) {
-    accounts.push(new UserAccount(this.username, this.password, this.first, this.last, this.phone, this.address));
-}
+// UserAccount.prototype.addAccount = function(username, password, first, last, phone, address) {
+//     accounts.push(new UserAccount(this.username, this.password, this.first, this.last, this.phone, this.address));
+// }
 //add sandwich to unique user account, to call: accounts[index].addFaveSandwich(pass arguments);
 UserAccount.prototype.addFaveSandwich = function(bread, spreads, jams, toppings, cut) {
-    this.addSandwich.push(new Sandwich(bread, spreads, jams, toppings, cut)); 
+    this.favoriteSandwiches.push(new Sandwich(bread, spreads, jams, toppings, cut)); 
 } 
 //fake user account
 accounts.push(new UserAccount("sarahbean", "coolbeans", "Bean", "Sarah", "503-555-1234", "34 N Sandwich Ave"));

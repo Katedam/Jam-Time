@@ -7,5 +7,6 @@ addUserAccount = function() {
     var phone = document.getElementById('register-phone').value;
     var address = document.getElementById('register-address').value;
     accounts.push(new UserAccount(username, password, firstName, lastName, phone, address));
+    //call add to local storage function
 }
 getButton.addEventListener("click", addUserAccount);

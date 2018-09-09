@@ -43,3 +43,9 @@ var guestOrderSum = [];
 GuestOrder.prototype.newOrder = function(sandwich) {
     guestOrderSum.push(new GuestOrder(sandwich));
 }
+
+var breads = ["Classic White", "Brioche", "Gluten-free White", "Cinnamon Raisin Swirl", "Bagel", "Teff Wrap without Honey", "English Muffin"];
+var spreads = ["Crunchy PB", "Creamy PB", "Almond Butter", "Sunflower Seed Butter", "Hazelnut Butter", "Cashew Nut Butter"];
+var jams = ["Grape Jelly", "Strawberry Jam", "Apricot Preserves", "Marionberry Jam", "Orange Marmalade", "Mixed Berry"];
+var toppings = ["Bananas", "Nutella", "Chocolate Chips", "Raisins", "Honey", "Coconut Flakes", "Butterscotch Chips"];
+var cuts = ["Vertical", "Diagonal", "No Cut", "No Crust"];

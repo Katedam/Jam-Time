@@ -40,3 +40,6 @@ function GuestOrder(bread, spreads, jams, toppings, cut) {
 
 var guestOrderSum = [];
 
+GuestOrder.prototype.newOrder = function(sandwich) {
+    guestOrderSum.push(new GuestOrder(sandwich));
+}

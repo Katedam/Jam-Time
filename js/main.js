@@ -1,4 +1,4 @@
-function UserAccount(username, password, first, last, phone, address, bread, spreads, jams, toppings, cut) {
+function UserAccount(username, password, first, last, phone, address) {
     this.username = username;
     this.password = password;
     this.lastName = last;
@@ -19,8 +19,8 @@ function Sandwich(bread, spreads, jams, toppings, cut) {
     this.cut = cut;
 }
 //add a new unique user account
-UserAccount.prototype.addAccount = function(profile) {
-    accounts.push(new UserAccount(profile));
+UserAccount.prototype.addAccount = function(username, password, first, last, phone, address) {
+    accounts.push(new UserAccount(this.username, this.password, this.first, this.last, this.phone, this.address));
 }
 //add sandwich to unique user account, to call: accounts[index].addFaveSandwich(pass arguments);
 UserAccount.prototype.addFaveSandwich = function(bread, spreads, jams, toppings, cut) {

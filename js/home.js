@@ -19,12 +19,9 @@ loadOrderPage = function(){
         if (username == accounts[index].username && password == accounts[index].password) {
             window.location.href = '../html/orderpage.html';
             break;
-        } else if (username !== accounts[index].username || password !== accounts[index].password) {
+        } else {
             document.getElementById('not-a-match').innerText = "Username or password does not match";
         } 
-    if (username == null || password == null) {
-        alert("Please fill out all required fields");
     }
-}
 }
 getLoginButton.addEventListener("click", loadOrderPage);

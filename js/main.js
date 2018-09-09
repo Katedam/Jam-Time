@@ -51,3 +51,11 @@ var spreads = ["Crunchy PB", "Creamy PB", "Almond Butter", "Sunflower Seed Butte
 var jams = ["Grape Jelly", "Strawberry Jam", "Apricot Preserves", "Marionberry Jam", "Orange Marmalade", "Mixed Berry"];
 var toppings = ["Bananas", "Nutella", "Chocolate Chips", "Raisins", "Honey", "Coconut Flakes", "Butterscotch Chips"];
 var cuts = ["Vertical", "Diagonal", "No Cut", "No Crust"];
+
+localStorage.setItem('accounts', JSON.stringify(accounts));
+
+// function updateAccounts() {
+//     var localAccounts = 
+
+// }
+

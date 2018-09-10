@@ -52,7 +52,7 @@ var jams = ["Grape Jelly", "Strawberry Jam", "Apricot Preserves", "Marionberry J
 var toppings = ["Bananas", "Nutella", "Chocolate Chips", "Raisins", "Honey", "Coconut Flakes", "Butterscotch Chips"];
 var cuts = ["Vertical", "Diagonal", "No Cut", "No Crust"];
 
-localStorage.setItem('accounts', JSON.stringify(accounts));
+localStorage.setItem('accounts', JSON.stringify(accounts))
 
 // function updateAccounts() {
 //     var localAccounts = 

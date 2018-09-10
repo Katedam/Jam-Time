@@ -1,4 +1,4 @@
-console.log('hey'); //test
+console.log('confirm.js is plugged in'); //test
 
 function changePic(interval, frames) {
     var int = 2;
@@ -11,5 +11,8 @@ function changePic(interval, frames) {
     
     var swap = window.setInterval(func, interval);
 }
-
 changePic(5000, 3);
+
+
+var checkForAddress = JSON.parse(window.localStorage.getItem('takeAddress'));
+console.log(checkForAddress);

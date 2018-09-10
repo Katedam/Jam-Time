@@ -1,8 +1,19 @@
-console.log('hey'); //test
+console.log('summary.js is pluggeg in'); //test
 
-function checkLocal() {
-    var localAccounts = JSON.parse(localStorage.getItem('account'));
+function localAddress() {
+    var takeAddress = document.getElementById('address-field');
+    if(takeAddress.textContent != null) {
+        localStorage.setItem('Address', JSON.stringify(takeAddress));
+        console.log(takeAddress.textContent);
+    }
 }
+localAddress();
+
+//checkLocal will check local storage for account information, and parse it into a variable.
+
+// function checkLocal() {
+//     var localAccounts = JSON.parse(localStorage.getItem('account'));
+// }
 
 function changePic(interval, frames) {
     var int = 1;

@@ -17,7 +17,9 @@ loadOrderPage = function(){
     var password = document.getElementById('password').value;
     for (var index = 0; index < accounts.length; index++) {
         if (username == accounts[index].username && password == accounts[index].password) {
-            localStorage.setItem("current-login", JSON.stringify(accounts[index]));
+            var currentUserIndex = index;
+            console.log(currentUserIndex);
+            localStorage.setItem("current login", JSON.stringify(currentUserIndex));
             window.location.href = '../html/orderpage.html';
             // document.getElementById('welcome-msg').innerText = "Hiya, " + accounts[index].firstName + ", Welcome Back!";
             // var showSandwiches = document.getElementById('saved-sandwiches');

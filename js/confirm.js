@@ -12,5 +12,4 @@ function changePic(interval, frames) {
     var swap = window.setInterval(func, interval);
 }
 
-
 changePic(5000, 3);

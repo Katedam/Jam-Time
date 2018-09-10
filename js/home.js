@@ -1,4 +1,4 @@
-var getButton = document.getElementById('registerButton');
+var getRegistrationButton = document.getElementById('registerButton');
 addUserAccount = function() {
     var username = document.getElementById('register-username').value;
     var password = document.getElementById('register-password').value;
@@ -9,4 +9,19 @@ addUserAccount = function() {
     accounts.push(new UserAccount(username, password, firstName, lastName, phone, address));
     //call add to local storage function
 }
-getButton.addEventListener("click", addUserAccount);
+getRegistrationButton.addEventListener("click", addUserAccount);
+
+var getLoginButton = document.getElementById('loginButton');
+loadOrderPage = function(){ 
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    for (var index = 0; index < accounts.length; index++) {
+        if (username == accounts[index].username && password == accounts[index].password) {
+            window.location.href = '../html/orderpage.html';
+            break;
+        } else {
+            document.getElementById('not-a-match').innerText = "Username or password does not match";
+        } 
+    }
+}
+getLoginButton.addEventListener("click", loadOrderPage);

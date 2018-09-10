@@ -26,6 +26,7 @@ function Sandwich(bread, spreads, jams, toppings, cut) {
 UserAccount.prototype.addFaveSandwich = function(bread, spreads, jams, toppings, cut) {
     this.favoriteSandwiches.push(new Sandwich(bread, spreads, jams, toppings, cut)); 
 } 
+
 //fake user accounts
 accounts.push(new UserAccount("katedam", "stickywithit", "Dameron", "Kate", "503-222-1234", "34 N Hazelnut Ave"));
 accounts.push(new UserAccount("ebittyschwinnie", "itsjamtime", "Clarkson", "Elizabeth", "503-322-5678", "77 NE Awesomesauce Ave"));

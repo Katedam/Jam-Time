@@ -1,12 +1,13 @@
 #b1 { background: hsl(0, 50%, 50%); }
-#b2 { background: url(../assets/amy-shamblen-765182-unsplash.jpg); }
+#b2 { background: url(../assets/amy-shamblen-765182-unsplash.jpg) no-repeat center center fixed; }
+#b3 { background: url(../assets/olia-gozha-54488-unsplash.jpg) no-repeat center center fixed; }
 
-body {
+/* body { */
     /* background: url(../assets/amy-shamblen-765182-unsplash.jpg) no-repeat center center fixed; */
-    background: url(../assets\olia-gozha-54488-unsplash.jpg) no-repeat center center fixed;
-    width: 100%;
+    /* background: url(../assets\olia-gozha-54488-unsplash.jpg) no-repeat center center fixed; */
+    /* width: 100%;
     height: auto;
-}
+} */
 #header {
     display: flex;
     align-items: center;
@@ -14,7 +15,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    height: 100px;
+    height: 90px;
 }
 
 #instructions {
@@ -24,11 +25,14 @@ body {
 #review {
     justify-content: flex-start;
     width: 52%;
+    margin: 100px;
 }
 
 #where {
     justify-content: flex-end;
     display: flex;
+    margin: 100px;
+
 }
 
 #finalize {

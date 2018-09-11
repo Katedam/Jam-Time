@@ -1,14 +1,12 @@
 //<body onload="welcomeUser()">
 //<h2 id="welcome"></p>
-//<script>
 
 function welcomeUser() {
     var text = "";
     if (navigator.orderpage.html == true) {
-        text = "Welcome!";
+        text = "You hungry, pal?";
     } //else {
       //  text = "Cookies are not enabled.";
   //  }
-    document.getElementById("You Hungry, Pal?").innerHTML = text;
+    document.getElementById("welcome").innerHTML = text;
 }
-//</script>

@@ -2,6 +2,11 @@ h3 {
   color: purple;
 }
 
+input {
+    font-family: 'Arimo', sans-serif;
+    color: var(--red);
+}
+
 legend {
   float: flex;
 }
@@ -10,5 +15,3 @@ legend {
     float: right;
     margin-right: 200px;
 }
-
-<!--tried to make this move the button to the right?-->

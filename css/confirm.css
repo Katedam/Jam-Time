@@ -22,6 +22,9 @@ body { background: url(../assets/mitch-lensink-588486-unsplash.jpg) no-repeat ce
     height: 100px;
 }
 
+#sending-sandy {
+    background-color: gray;
+}
 #delivery-bike {
     border: solid;
     background-color: rgba(128, 128, 128, .8);

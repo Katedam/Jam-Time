@@ -1,11 +1,17 @@
- body {
-    background: url(../assets/tuce-629552-unsplash.jpg) no-repeat center center fixed;
+body { background: url(../assets/mitch-lensink-588486-unsplash.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
 
- }
+/* #c2 { background: url(../assets/tuce-629552-unsplash.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
 .heading {
     display: flex;
     align-items: center;
@@ -19,7 +25,7 @@
 #delivery-bike {
     border: solid;
     background-color: rgba(128, 128, 128, .8);
-    margin-top: 210px;
+    margin-top: 490px;
 }
 
 /* #delivery-bike .background {

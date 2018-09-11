@@ -1,4 +1,4 @@
-console.log('summary.js is pluggeg in'); //test
+console.log('summary.js is pluggeg in'); 
 
 function localAddress() {
     var userAddress = document.getElementById("address-field").value;

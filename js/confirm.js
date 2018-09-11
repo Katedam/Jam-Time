@@ -1,7 +1,7 @@
-console.log('confirm.js is plugged in'); //test
+console.log('confirm.js is plugged in'); //Verifying that this file is being read.
 
-var checkForAddress = JSON.parse(window.localStorage.getItem('takeAddress'));
-// console.log(checkForAddress);
+JSON.parse(window.localStorage.getItem('Address'));
+console.log('Address');
 
 
 

@@ -15,6 +15,9 @@ function loadUserName() {
            var currentUser = accounts[index];
            document.getElementById('add-user-name').innerText = "Hiya, " + currentUser.lastName + ", welcome back!";
            var faves = document.getElementById('fave-sandwiches');
+           var header = document.createElement('h3');
+           header.innerText = "Would you like to reorder one of your faves?";
+           faves.appendChild(header);
            for (var jam = 0; jam < currentUser.favoriteSandwiches.length; jam++) {
                 var list = document.createElement('ul');
                 var sandwich = document.createElement('li');

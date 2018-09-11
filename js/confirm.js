@@ -1,6 +1,12 @@
 console.log('confirm.js is plugged in'); //Verifying that this file is being read.
 
 JSON.parse(window.localStorage.getItem('Address'));
+
+function showAddress() {
+    var Address = document.getElementById('user-place');
+    document.appendChild
+}
+
 console.log('Address');
 
 

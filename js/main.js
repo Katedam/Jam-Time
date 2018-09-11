@@ -1,8 +1,8 @@
 function UserAccount(username, password, first, last, phone, address) {
     this.username = username;
     this.password = password;
-    this.lastName = last;
     this.firstName = first;
+    this.lastName = last;
     this.phone = phone;
     this.address = address;
     this.favoriteSandwiches = [];
@@ -18,10 +18,7 @@ function Sandwich(bread, spreads, jams, toppings, cut) {
     this.isGrilled = false;
     this.cut = cut;
 }
-//add a new unique user account
-// UserAccount.prototype.addAccount = function(username, password, first, last, phone, address) {
-//     accounts.push(new UserAccount(this.username, this.password, this.first, this.last, this.phone, this.address));
-// }
+
 //add sandwich to unique user account, to call: accounts[index].addFaveSandwich(pass arguments);
 UserAccount.prototype.addFaveSandwich = function(bread, spreads, jams, toppings, cut) {
     this.favoriteSandwiches.push(new Sandwich(bread, spreads, jams, toppings, cut)); 
@@ -31,6 +28,10 @@ UserAccount.prototype.addFaveSandwich = function(bread, spreads, jams, toppings,
 accounts.push(new UserAccount("katedam", "stickywithit", "Dameron", "Kate", "503-222-1234", "34 N Hazelnut Ave"));
 accounts.push(new UserAccount("ebittyschwinnie", "itsjamtime", "Clarkson", "Elizabeth", "503-322-5678", "77 NE Awesomesauce Ave"));
 accounts.push(new UserAccount("zachary13", "hungryforPBandJ", "Tahsuda", "Zachary", "503-444-4321", "567 SE Marmalade St"));
+
+//fake favorite sandwiches
+var fakeUser = accounts[2];
+fakeUser.addFaveSandwich("white", "peanut butter", "grape jelly", "bananas", "diagonal");
 
 //use this constructor to store temp data to guestOrderSum array
 function GuestOrder(bread, spreads, jams, toppings, cut) {

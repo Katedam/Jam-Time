@@ -1,16 +1,16 @@
-#c1 { background: url(../assets/mitch-lensink-588486-unsplash.jpg) no-repeat center center fixed;
+body { background: url(../assets/mitch-lensink-588486-unsplash.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-#c2 { background: url(../assets/tuce-629552-unsplash.jpg) no-repeat center center fixed;
+/* #c2 { background: url(../assets/tuce-629552-unsplash.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 
 .heading {
     display: flex;

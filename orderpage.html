@@ -1,122 +1,73 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<title>Make Your Sandwich!
-</title>
-  <head><script src="js/order.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/base.css">
-    <link rel="stylesheet" type="text/css" href="css/order.css">
-=======
 <html>
   <head>
     <title>Make Your Sandwich!</title>
->>>>>>> 5423fdccc3164e44be1522a900c12a6f69d96f41
+    <link href="/css/base.css" rel="stylesheet">
+    <link href="/css/order.css" rel="stylesheet">
   </head>
-    <body>
-      <h2 id="welcome">You hungry, pal?</h2>
-      <h1>~Make Your Sandwich~</h1>
-        <h3 id="userName"></h3>
-        <form action="https://www.i.think.this.is.where.we.fudge.com">
-        <fieldset>
-<<<<<<< HEAD
-            <h3>Choose your bread:</h3>
-              <p>
-                <input type="radio" name="breads" value="Brioche" checked="checked"/> Brioche
-                <input type="radio" name="breads" value="Classic White"/> Classic White
-                <input type="radio" name="breads" value="Gluten Free White"/> Gluten Free White
-                <input type="radio" name="breads" value="Cinnamon Raisin Swirl"/> Cinnamon Raisin Swirl
-                <input type="radio" name="breads" value="Bagel"/> Bagel
-                <input type="radio" name="breads" value="Teff Wrap"/> Teff Wrap without Honey
-                <input type="radio" name="breads" value="English Muffin"/> English Muffin
-              </p>
-        </fieldset>
-        <fieldset>
-=======
-          <legend>
-            <h3>Choose your bread:</h3>
-            <input type="radio" name="breads" value="Brioche" checked="checked"/> Brioche
-            <input type="radio" name="breads" value="Classic White"/> Classic White
-            <input type="radio" name="breads" value="Gluten Free White"/> Gluten Free White
-            <input type="radio" name="breads" value="Cinnamon Raisin Swirl"/> Cinnamon Raisin Swirl
-            <input type="radio" name="breads" value="Bagel"/> Bagel
-            <input type="radio" name="breads" value="Teff Wrap"/> Teff Wrap without Honey
-            <input type="radio" name="breads" value="English Muffin"/> English Muffin
-          </legend>
-        </fieldset>
-        <fieldset>
-          <legend>
->>>>>>> 5423fdccc3164e44be1522a900c12a6f69d96f41
-            <h3>Select up to two spreads:</h3>
-              <p>
-                <input type="checkbox" name="spreads" value="Crunchy Peanut Butter" checked="checked"/> Crunchy Peanut Butter
-                <input type="checkbox" name="spreads" value="Smooth Peanut Butter"/> Smooth Peanut Butter
-                <input type="checkbox" name="spreads" value="Almond Butter"/> Almond Butter
-                <input type="checkbox" name="spreads" value="Almond Butter"/> Almond Butter
-                <input type="checkbox" name="spreads" value="Sunflower Butter"/> Sunflower Butter
-                <input type="checkbox" name="spreads" value="Cashew Nut Butter"/> Cashew Nut Butter
-              </p>
-<<<<<<< HEAD
-        </fieldset>
-        <fieldset>
-=======
-            </legend>
-        </fieldset>
-        <fieldset>
-          <legend>
->>>>>>> 5423fdccc3164e44be1522a900c12a6f69d96f41
-            <h3>Select up to two jams:</h3>
-              <p>
-                <input type="checkbox" name="jams" value="Grape Jelly" checked="checked"/> Grape Jelly
-                <input type="checkbox" name="jams" value="Strawberry Jam"/> Strawberry Jam
-                <input type="checkbox" name="jams" value="Apricot Preserves"/> Apricot Preserves
-                <input type="checkbox" name="jams" value="Marionberry"/> Marionberry
-                <input type="checkbox" name="jams" value="Orange Marmalade"/> Orange Marmalade
-                <input type="checkbox" name="jams" value="Mixed Berry"/> Mixed Berry
-<<<<<<< HEAD
-              </p>
-        </fieldset>
-        <fieldset>
-=======
-          </legend>
-        </fieldset>
-        <fieldset>
-          <legend>
->>>>>>> 5423fdccc3164e44be1522a900c12a6f69d96f41
-            <h3>Want Extras?</h3>
-              <p>
-                <input type="checkbox" name="extras" value="Banana" checked="checked"/>Bananas
-                <input type="checkbox" name="extras" value="Nutella"/> Nutella
-                <input type="checkbox" name="extras" value="Chocolate Chips"/> Chocolate Chips
-                <input type="checkbox" name="extras" value="Raisins"/> Raisins
-                <input type="checkbox" name="extras" value="Honey"/> Honey
-                <input type="checkbox" name="extras" value="Coconut Flakes"/> Coconut Flakes
-                <input type="checkbox" name="extras" value="Butterscotch Chips"/> Butterscotch Chips
-              </p>
-        </fieldset>
-        <fieldset>
-            <h3>Ya want it grilled?</h3>
-              <p>
-              <input type="checkbox" name="grilled" value="Grilled"/>GRILL IT!
-              </p>
-        </fieldset>
-        <fieldset>
-            <h3>Cut choice</h3>
-              <p>
-                <input type="radio" name="cut" value="vertical"/>Vertical
-                <input type="radio" name="cut" value="diagonal"/>Diagonal
-                <input type="radio" name="cut" value="no cut"/>No Cut
-                <input type="radio" name="cut" value="no crusts"/>No Crust
-              </p>
-        </fieldset>
-      </form>
-<<<<<<< HEAD
-        <input type="button" value="Make Sammy!"/>
-=======
-          <br/>
-        <input type="button" value="Make Sammy!"/>
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/order.js"></script>
-  </body>
->>>>>>> 5423fdccc3164e44be1522a900c12a6f69d96f41
+  <body>
+    <h2 id="welcome">You hungry, pal?</h2>
+    <h1>~Make Your Sandwich~</h1>
+    <h3 id="userName"></h3>
+    <form name="ingredient-lists">
+    <fieldset>
+      <legend>Breads</legend>
+        <h3>Choose your bread:</h3>
+        <input type="radio" name="breads" value="Brioche" checked="checked"/> Brioche
+        <input type="radio" name="breads" value="Classic White"/> Classic White
+        <input type="radio" name="breads" value="Gluten Free White"/> Gluten Free White
+        <input type="radio" name="breads" value="Cinnamon Raisin Swirl"/> Cinnamon Raisin Swirl
+        <input type="radio" name="breads" value="Bagel"/> Bagel
+        <input type="radio" name="breads" value="Teff Wrap"/> Teff Wrap without Honey
+        <input type="radio" name="breads" value="English Muffin"/> English Muffin
+    </fieldset>
+    <fieldset>
+      <legend>Spreads</legend>
+        <h3>Select up to two spreads:</h3>
+            <input type="checkbox" name="spreads" value="Crunchy Peanut Butter" checked="checked"/> Crunchy Peanut Butter
+            <input type="checkbox" name="spreads" value="Smooth Peanut Butter"/> Smooth Peanut Butter
+            <input type="checkbox" name="spreads" value="Almond Butter"/> Almond Butter
+            <input type="checkbox" name="spreads" value="Almond Butter"/> Almond Butter
+            <input type="checkbox" name="spreads" value="Sunflower Butter"/> Sunflower Butter
+            <input type="checkbox" name="spreads" value="Cashew Nut Butter"/> Cashew Nut Butter
+    </fieldset>
+    <fieldset>
+      <legend>Jams</legend>
+        <h3>Select up to two jams:</h3>
+            <input type="checkbox" name="jams" value="Grape Jelly" checked="checked"/> Grape Jelly
+            <input type="checkbox" name="jams" value="Strawberry Jam"/> Strawberry Jam
+            <input type="checkbox" name="jams" value="Apricot Preserves"/> Apricot Preserves
+            <input type="checkbox" name="jams" value="Marionberry"/> Marionberry
+            <input type="checkbox" name="jams" value="Orange Marmalade"/> Orange Marmalade
+            <input type="checkbox" name="jams" value="Mixed Berry"/> Mixed Berry
+    </fieldset>
+    <fieldset>
+      <legend>Want Extras?</legend>
+        <h3></h3>
+            <input type="checkbox" name="extras" value="Banana" checked="checked"/>Bananas
+            <input type="checkbox" name="extras" value="Nutella"/> Nutella
+            <input type="checkbox" name="extras" value="Chocolate Chips"/> Chocolate Chips
+            <input type="checkbox" name="extras" value="Raisins"/> Raisins
+            <input type="checkbox" name="extras" value="Honey"/> Honey
+            <input type="checkbox" name="extras" value="Coconut Flakes"/> Coconut Flakes
+            <input type="checkbox" name="extras" value="Butterscotch Chips"/> Butterscotch Chips
+    </fieldset>
+    <fieldset>
+        <h3>Ya want it grilled?</h3>
+          <input type="checkbox" name="grilled" value="Grilled"/>GRILL IT!
+    </fieldset>
+    <fieldset>
+        <h3>Cut choice</h3>
+            <input type="radio" name="cut" value="vertical"/>Vertical
+            <input type="radio" name="cut" value="diagonal"/>Diagonal
+            <input type="radio" name="cut" value="no cut"/>No Cut
+            <input type="radio" name="cut" value="no crusts"/>No Crust
+    </fieldset>
+  </form>
+    <input type="button" value="Make Sammy!"/>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/order.js"></script>
+</body>
 </html>
 
 

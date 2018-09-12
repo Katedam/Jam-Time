@@ -36,9 +36,9 @@ function loadUserName() {
               sandwich.innerText = "cut " + currentUser.favoriteSandwiches[jam].cut;
               list.appendChild(sandwich);
               faves.appendChild(list);
-         }
-     }
- }
+            }
+        }
+    }
 }
 
 window.onload = loadUserName();

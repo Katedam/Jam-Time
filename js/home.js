@@ -7,6 +7,9 @@ addUserAccount = function() {
     var phone = document.getElementById('register-phone').value;
     var address = document.getElementById('register-address').value;
     accounts.push(new UserAccount(username, password, firstName, lastName, phone, address));
+    localStorage.setItem('accounts', JSON.stringify(accounts));
+    localStorage.setItem("current login", JSON.stringify(accounts.length - 1));
+    window.location.href = '../html/orderpage.html';
 }
 getRegistrationButton.addEventListener("click", addUserAccount);
 
@@ -17,7 +20,6 @@ loadOrderPage = function(){
     for (var index = 0; index < accounts.length; index++) {
         if (username == accounts[index].username && password == accounts[index].password) {
             var currentUserIndex = index;
-            console.log(currentUserIndex);
             localStorage.setItem("current login", JSON.stringify(currentUserIndex));
             window.location.href = '../html/orderpage.html';
             // document.getElementById('welcome-msg').innerText = "Hiya, " + accounts[index].firstName + ", Welcome Back!";

@@ -4,22 +4,19 @@
     --red: #701c39;
     --purple: #561448;
     --cream: #f8ffe8;
-    --green: #bce2c0;
+    --green: #d8fadb;
 }
 h1 {
     font-family: 'Freckle Face', sans-serif;
     color: var(--purple);
 }
-.logo {
-    font-size: 82px;
-}
 h3 {
     font-family: 'Delius Unicase', cursive;
-    color: var(--cream);
+    color: var(--purple);
 }
 p {
     font-family: 'Arimo', sans-serif;
     color: var(--red);
 }
-    
+  
  

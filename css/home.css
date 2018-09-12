@@ -1,68 +1,141 @@
 body {
     position: relative;
-    background-color: var(--purple);
+    background-image: url("../assets/PBJ.jpg") ;
+    background-repeat: repeat-y;
+    background-size: contain;
 }
-#header-logo {
+p {
+    color: var(--cream);
+}
+#header-logo {  
     position: relative;
-    width: 100%;
+    top: 0;    
+    left: 0;
+    right: 0; 
     height: 500px;
-    border-radius: 80px;
 }
 #header-logo .logo {
+    font-size: 92px;
     position: relative;
-    left: 50%;
-    top: 50%;
-    color: var(--cream);
+    left: 33%;
+    top: 33%;
+    color: #561448;;
+    text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
     margin-bottom: 0;
     margin-top: 0;
 }
 #header-logo h3 {
-    color: var(--cream);
+    background-color: rgba(216, 250, 219, 0.8);
+    padding: 5px;
+    border-radius: 30px;
+    width: 260px;
     margin-top: 0;
     position: relative;
-    top: 55%;
-    left: 55%;
+    top: 32%;
+    left: 37%;
 }
 nav {
-    background-color: var(--purple);
+    background-color: var(--red);
     position: fixed;
     top: 0;
     left: 0;
-    height: 2em;
     width: 100%;
-    padding-top: 10px;
-    text-align: center;
+    overflow: hidden;
+    z-index: 10;
 }
 nav a {
+    float: left;
+    text-align: center;
     font-family:'Arimo', sans-serif;
     text-decoration: none;
     padding: 10px;
     color: var(--cream);
 }
 #home-page-forms {
+    margin: 0 1em 0 1em;
     display: flex;
-    background-color: var(--green);
-
-    height: 300px;
+    align-content: center;
+    height: 680px;
     font-family:'Arimo', sans-serif;
 }
 #register {
-    width: 70%;
+    background-color: rgba(128, 128, 128, 0.7);
+    max-width: 500px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    border: none;
 }
+#register legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+#register label {
+    display: block;
+    margin-bottom: 2px;
+}
+#register input[type="text"],
+#register input[type="password"] {
+    border: none;
+    background: #d2d9dd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin:0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+}
+#register input[type="text"]:focus,
+#register input[type="password"]:focus {
+    background: white;
+}
+#register input[type="button"] {
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: var(--red);
+    margin: 0 auto;
+    background: var(--green);
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #aedbd2;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+#register input[type="button"]:hover {
+    background: var(--brown);
+    color: var(--cream);
+    font-weight: bold;
+}
+
 #home-page-forms aside {
-    background-color: var(--brown);
     height: 300px;
+    width: 30%;
 }
 
 #home-page-forms .login {
+    background-color: rgba(128, 128, 128, 0.7);
     height: 161px;
+    margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
 }
 #home-page-forms .guest {
+    background-color: rgba(128, 128, 128, 0.7);
+
     height: 100px;
+    margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
 }
-section {
-    background-color: var(--cream);
-}
+
 #about-contact-info {
     margin-top: 45px;
     display: flex;

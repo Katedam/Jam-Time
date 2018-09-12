@@ -74,3 +74,9 @@ var sections = document.getElementsByClassName('hiddenSections');
 for (var element = 0; element < sections.length; element++) {
     sections[element].addEventListener("click", showSection);
 }
+
+logOut = function() {
+    var currentUserIndex = "";
+    localStorage.setItem("current login", JSON.stringify(currentUserIndex));
+}
+window.onload = logOut();

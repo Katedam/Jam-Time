@@ -3,6 +3,7 @@ body {
     background-image: url("../assets/PBJ.jpg");
     background-repeat: repeat-y;
     background-size: contain;
+    overflow-x: hidden;
 }
 #page-wrapper {
     background-color: rgba(207, 183, 162, 0.5);
@@ -73,15 +74,20 @@ nav a:last-of-type {
     margin: 0 1em 0 1em;
     display: flex;
     justify-content: space-evenly;
-    height: 680px;
     font-family:'Arimo', sans-serif;
+}
+.hidden {
+    display: none;
+}
+.unhidden {
+    display: block;
 }
 fieldset {
     background-color: rgba(60, 18, 8, 0.7);
     max-width: 500px;
     padding: 10px 20px;
     margin: 10px;
-    border: 5px solid var(--green);
+    border: 3px solid var(--tan);
 }
 legend {
     color: var(--cream);

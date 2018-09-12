@@ -29,3 +29,14 @@ loadOrderPage = function(){
     }
 }
 getLoginButton.addEventListener("click", loadOrderPage);
+
+var signUpButton = document.getElementById('showRegistration');
+showRegForm = function(){
+    var registerForm = document.getElementById('hiddenForm');
+    if (registerForm) {
+        if (registerForm.className == 'hidden') {
+            registerForm.className = 'unhidden';
+        }
+    }
+}
+signUpButton.addEventListener("click", showRegForm);

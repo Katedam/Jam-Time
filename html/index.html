@@ -18,37 +18,44 @@
 </div>
 
 <section id="home-page-forms">
-    <fieldset id="register">
-        <legend>register</legend>
-        <label for="register-firstName">First Name</label>
-        <input type="text" id="register-firstName">
-        <label for="register-lastName">Last Name</label>
-        <input type="text" id="register-lastName">
-        <label for="register-username">username</label>
-        <input type="text" id="register-username">
-        <label for="register-password">password</label>
-        <input type="password" id="register-password">
-        <label for="register-phone">Phone</label>
-        <input type="text" id="register-phone">
-        <label for="register-address">street address</label>
-        <input type="text" id="register-address">
-        <p>*delivery only available within Portland city limits</p>
-        <input id="registerButton" type="button" value="Let's Jam!">
-    </fieldset>
-<aside id="login-guest">
-    <fieldset class="login">
-        <legend>log-in</legend>
-        <label for="username">username</label>
-        <input type="text" id="username" value="">
-        <label for="password">password</label>
-        <input type="password" id="password">
-        <input id="loginButton" type="button" value="Peanut Buttah Jelly Time!">
-        <h3 id="not-a-match"></h3>
-    </fieldset>
-    <fieldset class="guest">
-        <legend>Continue as a Guest</legend>
-        <input type="button" value="So Jelly for that Jelly">
-    </fieldset>
+    <form id="hiddenForm" name="register-new-user" class="hidden">
+        <fieldset id="register">
+            <legend>register</legend>
+            <label for="register-firstName">First Name</label>
+            <input type="text" id="register-firstName">
+            <label for="register-lastName">Last Name</label>
+            <input type="text" id="register-lastName">
+            <label for="register-username">username</label>
+            <input type="text" id="register-username">
+            <label for="register-password">password</label>
+            <input type="password" id="register-password">
+            <label for="register-phone">Phone</label>
+            <input type="text" id="register-phone">
+            <label for="register-address">street address</label>
+            <input type="text" id="register-address">
+            <input id="registerButton" type="button" value="Let's Jam!">
+        </fieldset>
+    </form>
+<aside id="login-guestLogin">
+    <form>
+        <fieldset id="signUp">
+            <legend>Sign up</legend>
+            <input id="showRegistration" type="button" value="Sign me up!">
+        </fieldset>
+        <fieldset class="login">
+            <legend>log-in</legend>
+            <label for="username">username</label>
+            <input type="text" id="username" value="">
+            <label for="password">password</label>
+            <input type="password" id="password">
+            <input id="loginButton" type="button" value="Peanut Buttah Jelly Time!">
+            <h3 id="not-a-match"></h3>
+        </fieldset>
+        <fieldset class="guest">
+            <legend>Continue as a Guest</legend>
+            <input type="button" value="So Jelly for that Jelly">
+        </fieldset>
+    </form>
 </aside>
 </section>
 <section id="about">

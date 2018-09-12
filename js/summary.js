@@ -3,7 +3,10 @@ console.log('summary.js is pluggeg in');
 function checkAddress() {
     var typedAddress = document.getElementById('address-field').value;
     if(typedAddress === "") {
-        alert("You gotta let us know where to send it!");
+        var notEntered = document.getElementById("address");
+        var pleaseEnter = document.createElement("h3");
+        pleaseEnter.innerText = "You gotta let us know where to send it!";
+        notEntered.appendChild(pleaseEnter);
     } 
 }
 document.getElementById('order-button').addEventListener('click', checkAddress);

@@ -4,7 +4,7 @@ console.log('confirm.js is plugged in'); //Verifying that this file is being rea
 function showAddress() {
     var address = localStorage.getItem('address');
         if (address != null) {
-        var giveAddress = document.getElementById('users-place')
+        var giveAddress = document.getElementById('users-place');
         var spitAddress = document.createElement('h3');
         spitAddress.innerText = address;
         giveAddress.appendChild(spitAddress);

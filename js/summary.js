@@ -1,5 +1,13 @@
 console.log('summary.js is pluggeg in'); 
 
+function checkAddress() {
+    var typedAddress = document.getElementById('address-field').value;
+    if(typedAddress === "") {
+        alert("You gotta let us know where to send it!");
+    } 
+}
+document.getElementById('order-button').addEventListener('click', checkAddress);
+
 function localAddress() {
     var userAddress = document.getElementById("address-field").value;
     if(userAddress != "") {

@@ -2,21 +2,17 @@ console.log('confirm.js is plugged in'); //Verifying that this file is being rea
 
 
 function showAddress() {
-    var address = JSON.parse(localStorage.getElementById('user-place'));
+    var address = localStorage.getItem('address');
         if (address != null) {
-        var giveAddress = document.createElement('h5');
-        giveAddress.innerText = address.value;
-        giveAddress.appendChild(address);
-        }
+        var giveAddress = document.getElementById('users-place')
+        var spitAddress = document.createElement('h3');
+        spitAddress.innerText = address;
+        giveAddress.appendChild(spitAddress);
+    }
+console.log(address);
 }
 
 window.addEventListener('load', showAddress);
-console.log('Address');
-
-
-
-
-
 
 
 

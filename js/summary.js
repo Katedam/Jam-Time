@@ -8,15 +8,15 @@ function checkAddress() {
 }
 document.getElementById('order-button').addEventListener('click', checkAddress);
 
+
 function localAddress() {
     var userAddress = document.getElementById("address-field").value;
     if(userAddress != "") {
-        window.localStorage.setItem('Address', userAddress);
+        window.localStorage.setItem('address', JSON.stringify(userAddress));
         window.location.href='../html/confirm.html'
     }
 }
 document.getElementById('order-button').addEventListener('click', localAddress);
-
 
 
 

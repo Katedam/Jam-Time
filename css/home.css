@@ -122,19 +122,19 @@ input[type="password"]:focus {
     background: white;
 }
 
-#about{
+#aboutSection {
     padding: 1em;
     margin-top: 105px;
     background-color: rgba(60, 18, 8, 0.7);
 }
 
-#contact {
+#contactSection {
     padding: 1em;
     margin-top: 105px;
     background-color: rgba(60, 18, 8, 0.7);
 }
 
-#food-sources-info {
+#food-sources-infoSection {
     background-color: rgba(60, 18, 8, 0.7);
     padding: 1em;
     margin-top: 105px;

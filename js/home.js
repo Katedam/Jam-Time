@@ -40,3 +40,29 @@ showRegForm = function(){
     }
 }
 signUpButton.addEventListener("click", showRegForm);
+
+var sections = document.getElementsByClassName('hiddenSections');
+showSection = function() {
+    var about = document.getElementById('aboutSection');
+    var contact = document.getElementById('contactSection');
+    var spread = document.getElementById('food-sources-infoSection');
+    console.log(about + contact + spread);
+    if (about) {
+        if (about.className == 'hidden') {
+            about.className = 'unhidden';
+            console.log(about.className + 'this part works');
+        } 
+    } 
+    // else if (contact) {
+    //     if (contact.className == 'hidden') {
+    //         contact.className = 'unhidden';
+    //         console.log(contact.className);
+    //     }
+    // } else {
+    //     if (spread.className == 'hidden') {
+    //         spread.className = 'unhidden';
+    //         console.log(spread.className);
+    //     }
+    // }
+}
+// sections.addEventListener("click", showSection);

@@ -19,15 +19,16 @@ sandwiches.push(new Sandwich(this.bread, this.spreads, this.jams, this.toppings,
 
 
 var makeSammyButton = document.getElementById('makeSammy');
+//makeSammyButton.addEventListener("click", makeSandwich);
+
 makeSandwich = function() {
     var breadChoice = document.getElementById('bread-choice').value;
     var spreadChoice = document.getElementById('spread-choice').value;
     var jamChoice = document.getElementById('jam-choice').value;
     var extrasChoice = document.getElementById('extras-choice').value;
-    var topppingChoice = document.getElementById('toppings-choice').value;
     var grilledChoice = document.getElementById('grilled-choice').value;
     var cutChoice = document.getElementById('cut-choice').value;
-    sandwiches.push(new madeSandwich(bread, spread, jam, extras, grilled, cut));
+    sandwiches.push(new makeSandwich(breadChoice, spreadChoice, jamChoice, extrasChoice, grilledChoice, cutChoice));
     localStorage.setItem('sandwiches', JSON.stringify(sandwiches));
     localStorage.setItem("current order", JSON.stringify(sandwiches.length - 1));
     window.location.href = '../html/summary.html';

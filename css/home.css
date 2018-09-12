@@ -5,7 +5,7 @@ body {
     background-size: contain;
 }
 #page-wrapper {
-    background-color: rgba(207, 183, 162, 0.3);
+    background-color: rgba(207, 183, 162, 0.4);
     margin: 3.5em 1em 1em 1em;
 }
 p {
@@ -31,17 +31,17 @@ p {
     margin-top: 0;
 }
 #header-logo h3 {
-    background-color: rgba(216, 250, 219, 0.8);
+    font-size: 40px;
+    text-shadow: 3px 3px 5px black;
     padding: 5px;
     border-radius: 30px;
-    width: 260px;
     margin-top: 0;
     position: relative;
-    top: 32%;
+    top: 12%;
     left: 37%;
 }
 nav {
-    background-color: var(--red);
+    background-color: rgba(60, 18, 8, 0.7);
     position: fixed;
     top: 0;
     left: 0;
@@ -50,7 +50,6 @@ nav {
     z-index: 10;
 }
 nav a {
-    text-align: center;
     float: left;
     font-family:'Arimo', sans-serif;
     text-decoration: none;
@@ -60,6 +59,7 @@ nav a {
 #home-page-forms {
     margin: 0 1em 0 1em;
     display: flex;
+    justify-content: space-evenly;
     height: 680px;
     font-family:'Arimo', sans-serif;
 }
@@ -67,11 +67,12 @@ fieldset {
     background-color: rgba(60, 18, 8, 0.7);
     max-width: 500px;
     padding: 10px 20px;
-    margin: 10px auto;
-    border: 1em solid var(--green);
+    margin: 10px;
+    border: 5px solid var(--green);
 }
 legend {
     color: var(--cream);
+    text-shadow: 3px 3px 5px black;
     font-size: 1.4em;
     margin-bottom: 10px;
 }
@@ -103,14 +104,14 @@ input[type="password"]:focus {
 }
 
 #about-contact-info {
+    padding: 1em;
     margin-top: 45px;
     background-color: rgba(60, 18, 8, 0.7);
-    margin-left: 
 }
 
 #food-sources-info {
     background-color: rgba(60, 18, 8, 0.7);
-
+    padding: 1em;
     margin-top: 45px;
     height: 600px;
 }

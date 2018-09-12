@@ -22,8 +22,6 @@ loadOrderPage = function(){
             var currentUserIndex = index;
             localStorage.setItem("current login", JSON.stringify(currentUserIndex));
             window.location.href = '../html/orderpage.html';
-            // document.getElementById('welcome-msg').innerText = "Hiya, " + accounts[index].firstName + ", Welcome Back!";
-            // var showSandwiches = document.getElementById('saved-sandwiches');
             break;
         } else {
             document.getElementById('not-a-match').innerText = "Username or password does not match";

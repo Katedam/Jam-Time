@@ -33,6 +33,8 @@ UserAccount.prototype.addFaveSandwich = function(bread, spreads, jams, toppings,
 var fakeUser = accounts[2];
 fakeUser.addFaveSandwich("white", "peanut butter", "grape jelly", "bananas", "diagonal");
 fakeUser.addFaveSandwich("bagel", "almond butter", "Marionberry Jam", "coconut flakes", "vertical");
+fakeUser = accounts[0];
+fakeUser.addFaveSandwich("bagel", "almond butter", "Marionberry Jam", "coconut flakes", "vertical");
 
 //use this constructor to store temp data to guestOrderSum array
 function GuestOrder(bread, spreads, jams, toppings, cut) {

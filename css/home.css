@@ -46,12 +46,12 @@ h4 {
     left: 37%;
 }
 nav {
+    clear: both;
     /* background-color: rgba(60, 18, 8, 0.7); */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    overflow: hidden;
     z-index: 10;
 }
 nav a {
@@ -61,14 +61,9 @@ nav a {
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
     float: left;
     text-decoration: none;
-    padding: 10px;
+    padding: 20px;
     color: var(--cream);
     padding-left: 1em;
-}
-
-nav a:last-of-type {
-    float: right;
-    padding-right: 1em;
 }
 #home-page-forms {
     margin: 0 1em 0 1em;
@@ -84,11 +79,6 @@ nav a:last-of-type {
 .unhidden {
     display: block;
 }
-/* #register {
-    display: flex;
-    flex-wrap: wrap;
-
-} */
 form {
     margin-left: 10%;
     margin-top: 20%;

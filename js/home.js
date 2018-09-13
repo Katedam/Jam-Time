@@ -10,6 +10,8 @@ showRegForm = function(){
     if (registerForm) {
         if (registerForm.className == 'hidden') {
             registerForm.className = 'unhidden';
+            var signIn = document.getElementById('login-guestLogin');
+            signIn.className = 'hidden';
         }
     }
 }

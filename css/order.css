@@ -1,17 +1,28 @@
-h3 {
-  color: purple;
+h1 {
+  text-align: center;
 }
 
-input {
-    font-family: 'Arimo', sans-serif;
-    color: var(--red);
+h3 {
+  color: purple;
 }
 
 legend {
   float: flex;
 }
 
-#move-to-summary-button {
-    float: right;
-    margin-right: 200px;
+#order-page-forms {
+    margin: 0 1em 0 1em;
+    height: 680px;
+    font-family:'Arimo', sans-serif;
+    https://gph.is/1LjlEFE
+}
+
+#welcome {
+  text-align: center;
+}
+
+#makeSammy {
+  margin: 0 1em 0 1em;
+  display: block;
+  font-family:'Arimo', sans-serif;
 }

@@ -2,7 +2,7 @@ body {
     position: relative;
     background-image: url("../assets/PBJ.jpg");
     background-repeat: repeat-y;
-    background-size: contain;
+    background-size: cover;
     overflow-x: hidden;
 }
 #page-wrapper {
@@ -46,12 +46,12 @@ h4 {
     left: 37%;
 }
 nav {
+    clear: both;
     /* background-color: rgba(60, 18, 8, 0.7); */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    overflow: hidden;
     z-index: 10;
 }
 nav a {
@@ -61,18 +61,15 @@ nav a {
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
     float: left;
     text-decoration: none;
-    padding: 10px;
+    padding: 20px;
     color: var(--cream);
     padding-left: 1em;
-}
-
-nav a:last-of-type {
-    float: right;
-    padding-right: 1em;
 }
 #home-page-forms {
     margin: 0 1em 0 1em;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-evenly;
     font-family:'Arimo', sans-serif;
 }
@@ -82,11 +79,15 @@ nav a:last-of-type {
 .unhidden {
     display: block;
 }
+form {
+    margin-left: 10%;
+    margin-top: 5%;
+    max-width: 850px;
+}
 fieldset {
     background-color: rgba(60, 18, 8, 0.7);
-    max-width: 500px;
+    max-width: 800px;
     padding: 10px 20px;
-    margin: 10px;
     border: 3px solid var(--tan);
 }
 legend {
@@ -124,19 +125,18 @@ input[type="password"]:focus {
 
 #aboutSection {
     padding: 1em;
-    margin-top: 105px;
+    margin-top: 5%;
     background-color: rgba(60, 18, 8, 0.7);
 }
 
 #contactSection {
     padding: 1em;
-    margin-top: 105px;
+    margin-top: 5%;
     background-color: rgba(60, 18, 8, 0.7);
 }
 
 #food-sources-infoSection {
     background-color: rgba(60, 18, 8, 0.7);
     padding: 1em;
-    margin-top: 105px;
-    height: 600px;
+    margin-top: 10%;
 }

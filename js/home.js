@@ -54,28 +54,39 @@ loadOrderPage = function(){
 getLoginButton.addEventListener("click", loadOrderPage);
 getGuestLogin.addEventListener("click", loadOrderPage);
 
-showSection = function() {
+showSection = function(event) {
+    var clickedId = event.target.id;
     var about = document.getElementById('aboutSection');
     var contact = document.getElementById('contactSection');
     var spread = document.getElementById('food-sources-infoSection');
-    console.log(about + contact + spread);
-    if (about) {
+    var signIn = document.getElementById('login-guestLogin');
+    if (clickedId == "about") {
         if (about.className == 'hidden') {
             about.className = 'unhidden';
             contact.className = 'hidden';
             spread.className = 'hidden';
+            signIn.className = 'hidden';
         } 
-    } else if (contact) {
+    } else if (clickedId == "contact") {
         if (contact.className == 'hidden') {
             contact.className = 'unhidden';
             spread.className = 'hidden';
             about.className = 'hidden';
+            signIn.className = 'hidden';
         }
-    } else if (spread) {
+    } else if (clickedId == "spread") {
         if (spread.className == 'hidden') {
             spread.className = 'unhidden';
             contact.className = 'hidden';
             about.className = 'hidden';
+            signIn.className = 'hidden';
+        }
+    } else if (clickedId == "sign-in") {
+        if (signIn.className == 'hidden') {
+            signIn.className = 'unhidden';
+            contact.className = 'hidden';
+            about.className = 'hidden';
+            spread.className = 'hidden';
         }
     }
 }

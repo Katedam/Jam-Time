@@ -60,12 +60,16 @@ showSection = function(event) {
     var contact = document.getElementById('contactSection');
     var spread = document.getElementById('food-sources-infoSection');
     var signIn = document.getElementById('login-guestLogin');
+    var header = document.getElementById('header-logo');
+    var register = document.getElementById('hiddenForm');
     if (clickedId == "about") {
         if (about.className == 'hidden') {
             about.className = 'unhidden';
             contact.className = 'hidden';
             spread.className = 'hidden';
             signIn.className = 'hidden';
+            header.className = 'hidden';
+            forms.className = 'hidden';
         } 
     } else if (clickedId == "contact") {
         if (contact.className == 'hidden') {
@@ -73,6 +77,8 @@ showSection = function(event) {
             spread.className = 'hidden';
             about.className = 'hidden';
             signIn.className = 'hidden';
+            header.className = 'hidden';
+            register.className = 'hidden';
         }
     } else if (clickedId == "spread") {
         if (spread.className == 'hidden') {
@@ -80,6 +86,8 @@ showSection = function(event) {
             contact.className = 'hidden';
             about.className = 'hidden';
             signIn.className = 'hidden';
+            header.className = 'hidden';
+            register.className = 'hidden';
         }
     } else if (clickedId == "sign-in") {
         if (signIn.className == 'hidden') {
@@ -87,6 +95,7 @@ showSection = function(event) {
             contact.className = 'hidden';
             about.className = 'hidden';
             spread.className = 'hidden';
+            header.className = 'hidden';
         }
     }
 }

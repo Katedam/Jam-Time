@@ -23,18 +23,18 @@ body { background: url(../assets/mitch-lensink-588486-unsplash.jpg) no-repeat ce
 }
 
 #sending-sandy {
-    background-color: gray;
+    background-color: rgba(128, 128, 128, .8);
+    border: solid 2px;
+    border-radius: 2px;
+    border-color: #A77D63;
 }
 #delivery-bike {
-    border: solid;
+    border: solid 2px;
+    border-radius: 2px;
+    border-color: #382723;
     background-color: rgba(128, 128, 128, .8);
-    margin-top: 490px;
+    margin-top: 290px;
 }
-
-/* #delivery-bike .background {
-    background: gray;
-    opacity: 0.75;
-} */
 
 #bike {
     opacity: 1;

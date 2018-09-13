@@ -19,6 +19,7 @@ body { background: url(../assets/amy-shamblen-765182-unsplash.jpg) no-repeat cen
     margin-right: auto;
     width: 50%;
     height: 90px;
+    font-size: 4em;
 }
 
 #instructions {
@@ -28,14 +29,13 @@ body { background: url(../assets/amy-shamblen-765182-unsplash.jpg) no-repeat cen
 #review {
     justify-content: flex-start;
     width: 52%;
-    margin: 100px;
+    margin: 70px;
 }
 
 #where {
     justify-content: flex-end;
     display: flex;
-    margin: 100px;
-
+    margin: 70px;
 }
 
 #finalize {
@@ -45,20 +45,25 @@ body { background: url(../assets/amy-shamblen-765182-unsplash.jpg) no-repeat cen
 #summary-container{
     width: 49%;
     right: 50%;
-    border: solid 1px;
     justify-content: flex-start;
+    margin: 5px;
+    border-color: #DC9023;
+    border-radius: 3px;
 }
 
 #address-box {
     display: flex;
     width: 50%;
     right: 50%;
+    margin: 5px;
 }
 
 #address {
     display: flex;
     width: 100%;
     right: 50%;
+    border-color: #DC9023;
+    border-radius: 3px;
 }
 
 #button {

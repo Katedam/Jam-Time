@@ -59,23 +59,75 @@ function Sandwich(bread, spreads, jams, toppings, cut) {
     this.cut = cut;
 }
 
-var sandwiches = [];
- sandwiches.push(new Sandwich(this.bread, this.spreads, this.jams, this.toppings, this.isGrilled, this.cut));
- var makeSammyButton = document.getElementById('makeSammy');
+// var sandwiches = [];
+//  sandwiches.push(new Sandwich(this.bread, this.spreads, this.jams, this.toppings, this.isGrilled, this.cut));
+//  var makeSammyButton = document.getElementById('makeSammy');
 //makeSammyButton.addEventListener("click", makeSandwich);
  makeSandwich = function() {
-    var breadChoice = document.getElementById('bread-choice').value;
-    var spreadChoice = document.getElementById('spread-choice').value;
-    var jamChoice = document.getElementById('jam-choice').value;
-    var extrasChoice = document.getElementById('extras-choice').value;
-    var grilledChoice = document.getElementById('grilled-choice').value;
-    var cutChoice = document.getElementById('cut-choice').value;
-    sandwiches.push(new makeSandwich(breadChoice, spreadChoice, jamChoice, extrasChoice, grilledChoice, cutChoice));
-    localStorage.setItem('sandwiches', JSON.stringify(sandwiches));
-    localStorage.setItem("current order", JSON.stringify(sandwiches.length - 1));
-    window.location.href = '../html/summary.html';
+    var checkedBread = document.getElementsByClassName('breads');
+    for (var breadIndex = 0; breadIndex < checkedBread.length; breadIndex++) {
+        if (checkedBread[breadIndex].checked == true) {
+            var breadChoice = checkedBread[breadIndex].value;
+            console.log(breadChoice);
+        } 
+    }
+    var checkedSpreads = document.getElementsByClassName('spreads');
+    for (var spreadIndex = 0; spreadIndex < checkedSpreads.length; spreadIndex++) {
+        if (checkedSpreads[spreadIndex].checked == true) {
+            var spreadChoice = checkedSpreads[spreadIndex].value;
+            console.log(spreadChoice);
+        } 
+    }
+    var checkedJams = document.getElementsByClassName('jams');
+    for (var jamsIndex = 0; jamsIndex < checkedJams.length; jamsIndex++) {
+        if (checkedJams[jamsIndex].checked == true) {
+            var jamsChoice = checkedJams[jamsIndex].value;
+            console.log(jamsChoice);
+        } 
+    }
+    var checkedExtras = document.getElementsByClassName('extras');
+    for (var extrasIndex = 0; extrasIndex < checkedExtras.length; extrasIndex++) {
+        if (checkedExtras[extrasIndex].checked == true) {
+            var extrasChoice = checkedExtras[extrasIndex].value;
+            console.log(extrasChoice);
+        } 
+    }
+    var checkedGrilled = document.getElementById('grilled');
+        if (checkedGrilled.checked == true) {
+            var grilledChoice = checkedGrilled.value;
+            console.log(grilledChoice);
+        } 
+    var checkedCut = document.getElementsByClassName('cuts');
+    for (var cutIndex = 0; cutIndex < checkedCut.length; cutIndex++) {
+        if (checkedCut[cutIndex].checked == true) {
+            var cutChoice = checkedCut[cutIndex].value;
+            console.log(cutChoice);
+        } 
+    }
+    
+    // var spreadChoice = document.getElementById('spread-choice').value;
+    // var jamChoice = document.getElementById('jam-choice').value;
+    // var extrasChoice = document.getElementById('extras-choice').value;
+    // var grilledChoice = document.getElementById('grilled-choice').value;
+    // var cutChoice = document.getElementById('cut-choice').value;
+    // sandwiches.push(new makeSandwich(breadChoice, spreadChoice, jamChoice, extrasChoice, grilledChoice, cutChoice));
+    // localStorage.setItem('sandwiches', JSON.stringify(sandwiches));
+    // localStorage.setItem("current order", JSON.stringify(sandwiches.length - 1));
+    // window.location.href = '../html/summary.html';
 }
-makeSammyButton.addEventListener("click", makeSandwich);
+// makeSammyButton.addEventListener("click", makeSandwich);
+
+function sendOrder() {
+    var newSandwich = document.forms[0];
+    var txt = "";
+    var i;
+    for (i = 0; i < sandwiches.length; i++) {
+        if (sandwiches[i].checked) {
+            text = text + sandwiches[i].value + " ";
+        }
+    }
+    document.getElementById("order").value = "You ordered a sammy with: " + txt;
+}
  //function welcomeUser() {
 //    var text = "";
 //    if (navigator.orderpage.html == true) {
@@ -85,6 +137,6 @@ makeSammyButton.addEventListener("click", makeSandwich);
   //  }
 //    document.getElementById("You Hungry, Pal?").innerHTML = text;
 //};
- window.onload = loadUserName(); 
+ window.onload = loadUserName();
   //window.addEventListener()
 //</script>

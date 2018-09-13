@@ -51,15 +51,26 @@ nav {
     z-index: 10;
 }
 nav a {
-    font-family: 'Freckle Face', sans-serif;
-    font-size: 30px;
+    font-family: 'Delius Unicase', cursive;
+    font-size: 22px;
     color: #fbfdf7;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: 3px 3px 5px black;
     float: left;
     text-decoration: none;
-    padding: 20px;
+    padding-top: 20px;
+    margin-left: 4%;
     color: var(--cream);
     padding-left: 1em;
+}
+#sign-in {
+    background: var(--green);
+    font-size: 22px;
+    text-align: center;
+    font-style: normal;
+    border: 1px solid #aedbd2;
+    border-width: 1px 1px 3px;
+    padding: 10px 20px 16px 18px;
+    margin-top: 5px;
 }
 #home-page-forms {
     margin: 0 1em 0 1em;

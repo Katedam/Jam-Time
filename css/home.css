@@ -4,6 +4,7 @@ body {
     background-repeat: repeat-y;
     background-size: cover;
     overflow-x: hidden;
+    height: 100vh;
 }
 p {
     color: var(--cream);
@@ -14,14 +15,12 @@ h4 {
 }
 #header-logo { 
     position: relative;
-    top: 0;    
+    top: 20%;    
     left: 0;
     right: 0; 
-    height: 500px;
+    margin-bottom: 5%;
 }
 #header-logo .logo {
-    /* background-color: rgba(60, 18, 8, 0.7); */
-    /* border-radius: 50%;  */
     font-size: 200px;
     position: relative;
     left: 18%;

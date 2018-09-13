@@ -11,7 +11,7 @@
     <h3 id="add-user-name"></h3>
     <div id="fave-sandwiches"></div>
     <section id="order-page-forms">
-  <form name="ingredient-lists">
+  <form name="ingredient-lists" action="/action_page.php">
     <fieldset>
       <legend>breads</legend>
       <h3 id="bread-choice">choose your bread:</h3>
@@ -55,18 +55,44 @@
       <input type="checkbox" name="extras" value="Butterscotch Chips"/> Butterscotch Chips
     </fieldset>
     <fieldset>
-      <h3 id="grilled-choice">ya want it grilled?</h3>          
+      <h3 id="grilled-choice">ya want it grilled?</h3>
       <input type="checkbox" name="grilled" value="Grilled"/>GRILL IT!
     </fieldset>
     <fieldset>
-      <h3 id="cut-choice">cut choice</h3>            
+      <h3 id="cut-choice">cut choice</h3>
       <input type="radio" name="cut" value="vertical"/>Vertical
       <input type="radio" name="cut" value="diagonal"/>Diagonal
       <input type="radio" name="cut" value="no cut"/>No Cut
       <input type="radio" name="cut" value="no crusts"/>No Crust
     </fieldset>
   </form>
-    <input id="makeSammy" type="button" value="Make Sammy!"/>
+
+<!--<form action="/action_page.php">
+  <input type="radio" name="coffee" value="cream">With cream<br>
+  <input type="radio" name="coffee" value="sugar">With sugar<br>
+  <br>
+  <input type="button" onclick="myFunction()" value="Send order">
+  <br><br>
+  <input type="text" id="order" size="50">
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+function myFunction() {
+    var coffee = document.forms[0];
+    var txt = "";
+    var i;
+    for (i = 0; i < coffee.length; i++) {
+        if (coffee[i].checked) {
+            txt = txt + coffee[i].value + " ";
+        }
+    }
+    document.getElementById("order").value = "You ordered a coffee with: " + txt;
+}
+</script>--->
+    <input type="text" id="order" size="50">
+    <input type="submit" value="Submit">
+    <input id="makeSammy" type="button" onclick="myFunction()" value="Make Sammy!"/>
     <script type="text/javascript" src="../js/main.js"></script>
     <script type="text/javascript" src="../js/order.js"></script>
   </section>

@@ -76,6 +76,18 @@ var sandwiches = [];
     window.location.href = '../html/summary.html';
 }
 makeSammyButton.addEventListener("click", makeSandwich);
+
+function sendOrder() {
+    var newSandwich = document.forms[0];
+    var txt = "";
+    var i;
+    for (i = 0; i < sandwiches.length; i++) {
+        if (sandwiches[i].checked) {
+            text = text + sandwiches[i].value + " ";
+        }
+    }
+    document.getElementById("order").value = "You ordered a sammy with: " + txt;
+}
  //function welcomeUser() {
 //    var text = "";
 //    if (navigator.orderpage.html == true) {
@@ -85,6 +97,6 @@ makeSammyButton.addEventListener("click", makeSandwich);
   //  }
 //    document.getElementById("You Hungry, Pal?").innerHTML = text;
 //};
- window.onload = loadUserName(); 
+ window.onload = loadUserName();
   //window.addEventListener()
 //</script>

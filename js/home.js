@@ -1,3 +1,9 @@
+var navBar = document.getElementsByTagName('nav');
+changeNavBackground = function() {
+    if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
+        navBar.classList.add()
+    }
+}
 var signUpButton = document.getElementById('showRegistration');
 showRegForm = function(){
     var registerForm = document.getElementById('hiddenForm');
@@ -56,17 +62,20 @@ showSection = function() {
     if (about) {
         if (about.className == 'hidden') {
             about.className = 'unhidden';
-            console.log(about.className + 'this part works');
+            contact.className = 'hidden';
+            spread.className = 'hidden';
         } 
     } else if (contact) {
         if (contact.className == 'hidden') {
             contact.className = 'unhidden';
-            console.log(contact.className);
+            spread.className = 'hidden';
+            about.className = 'hidden';
         }
-    } else {
+    } else if (spread) {
         if (spread.className == 'hidden') {
             spread.className = 'unhidden';
-            console.log(spread.className);
+            contact.className = 'hidden';
+            about.className = 'hidden';
         }
     }
 }

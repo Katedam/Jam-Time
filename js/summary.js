@@ -15,8 +15,6 @@ document.getElementById('order-button').addEventListener('click', localAddress);
 
 
 
-
-
 //checkLocal will check local storage for account information, and parse it into a variable.
 
 // function checkLocal() {

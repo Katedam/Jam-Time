@@ -3,8 +3,17 @@ body {
     background-image: url("../assets/PBJ.jpg");
     background-repeat: repeat-y;
     background-size: contain;
+    overflow-x: hidden;
+}
+#page-wrapper {
+    background-color: rgba(207, 183, 162, 0.5);
+    margin: 0;
 }
 p {
+    color: var(--cream);
+}
+h4 {
+    font-family: 'Arimo', sans-serif;
     color: var(--cream);
 }
 #header-logo { 
@@ -16,28 +25,28 @@ p {
 }
 #header-logo .logo {
     /* background-color: rgba(60, 18, 8, 0.7); */
-    border-radius: 50%; 
-    font-size: 92px;
+    /* border-radius: 50%;  */
+    font-size: 200px;
     position: relative;
-    left: 33%;
-    top: 33%;
-    color: #561448;;
-    text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
-    margin-bottom: 0;
-    margin-top: 0;
+    left: 18%;
+    top: 18%;
+    color: #fbfdf7;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    width: 66%;
 }
 #header-logo h3 {
-    background-color: rgba(216, 250, 219, 0.8);
+    font-size: 40px;
+    text-shadow: 3px 3px 5px black;
     padding: 5px;
     border-radius: 30px;
-    width: 260px;
     margin-top: 0;
     position: relative;
-    top: 32%;
+    top: 12%;
     left: 37%;
 }
 nav {
-    background-color: var(--red);
+    /* background-color: rgba(60, 18, 8, 0.7); */
     position: fixed;
     top: 0;
     left: 0;
@@ -46,28 +55,43 @@ nav {
     z-index: 10;
 }
 nav a {
-    text-align: center;
+    font-family: 'Freckle Face', sans-serif;
+    font-size: 30px;
+    color: #fbfdf7;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
     float: left;
-    font-family:'Arimo', sans-serif;
     text-decoration: none;
     padding: 10px;
     color: var(--cream);
+    padding-left: 1em;
+}
+
+nav a:last-of-type {
+    float: right;
+    padding-right: 1em;
 }
 #home-page-forms {
     margin: 0 1em 0 1em;
     display: flex;
-    height: 680px;
+    justify-content: space-evenly;
     font-family:'Arimo', sans-serif;
+}
+.hidden {
+    display: none;
+}
+.unhidden {
+    display: block;
 }
 fieldset {
     background-color: rgba(60, 18, 8, 0.7);
     max-width: 500px;
     padding: 10px 20px;
-    margin: 10px auto;
-    border: 1em solid var(--green);
+    margin: 10px;
+    border: 3px solid var(--tan);
 }
 legend {
     color: var(--cream);
+    text-shadow: 3px 3px 5px black;
     font-size: 1.4em;
     margin-bottom: 10px;
 }
@@ -76,7 +100,7 @@ label {
     display: block;
     margin-bottom: 2px;
 }
-input[type="text"],
+
 input[type="password"] {
     border: none;
     background: #CFB7A2;
@@ -93,40 +117,26 @@ input[type="password"] {
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
 }
-input[type="text"]:focus,
+
 input[type="password"]:focus {
     background: white;
 }
-input[type="button"] {
-    position: relative;
-    display: block;
-    padding: 9px 39px 10px 39px;
-    color: var(--red);
-    margin: 0 auto;
-    background: var(--green);
-    font-size: 18px;
-    text-align: center;
-    font-style: normal;
-    width: 100%;
-    border: 1px solid #aedbd2;
-    border-width: 1px 1px 3px;
-    margin-bottom: 10px;
-}
-input[type="button"]:hover {
-    background: var(--brown);
-    color: var(--cream);
-    font-weight: bold;
-}
 
-#about-contact-info {
-    margin-top: 45px;
+#aboutSection {
+    padding: 1em;
+    margin-top: 105px;
     background-color: rgba(60, 18, 8, 0.7);
-    margin-left: 
 }
 
-#food-sources-info {
+#contactSection {
+    padding: 1em;
+    margin-top: 105px;
     background-color: rgba(60, 18, 8, 0.7);
+}
 
-    margin-top: 45px;
+#food-sources-infoSection {
+    background-color: rgba(60, 18, 8, 0.7);
+    padding: 1em;
+    margin-top: 105px;
     height: 600px;
 }

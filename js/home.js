@@ -1,3 +1,20 @@
+var navBar = document.getElementsByTagName('nav');
+changeNavBackground = function() {
+    if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
+        navBar.classList.add()
+    }
+}
+var signUpButton = document.getElementById('showRegistration');
+showRegForm = function(){
+    var registerForm = document.getElementById('hiddenForm');
+    if (registerForm) {
+        if (registerForm.className == 'hidden') {
+            registerForm.className = 'unhidden';
+        }
+    }
+}
+signUpButton.addEventListener("click", showRegForm);
+
 var getRegistrationButton = document.getElementById('registerButton');
 addUserAccount = function() {
     var username = document.getElementById('register-username').value;
@@ -13,11 +30,13 @@ addUserAccount = function() {
 }
 getRegistrationButton.addEventListener("click", addUserAccount);
 
+var getGuestLogin = document.getElementById('guestLogin');
 var getLoginButton = document.getElementById('loginButton');
 loadOrderPage = function(){ 
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
-    for (var index = 0; index < accounts.length; index++) {
+    if (getLoginButton) {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        for (var index = 0; index < accounts.length; index++) {
         if (username == accounts[index].username && password == accounts[index].password) {
             var currentUserIndex = index;
             localStorage.setItem("current login", JSON.stringify(currentUserIndex));
@@ -25,7 +44,48 @@ loadOrderPage = function(){
             break;
         } else {
             document.getElementById('not-a-match').innerText = "Username or password does not match";
+            } 
         } 
+    } if (getGuestLogin) {
+        window.location.href = '../html/orderpage.html';
     }
+    
 }
 getLoginButton.addEventListener("click", loadOrderPage);
+getGuestLogin.addEventListener("click", loadOrderPage);
+
+showSection = function() {
+    var about = document.getElementById('aboutSection');
+    var contact = document.getElementById('contactSection');
+    var spread = document.getElementById('food-sources-infoSection');
+    console.log(about + contact + spread);
+    if (about) {
+        if (about.className == 'hidden') {
+            about.className = 'unhidden';
+            contact.className = 'hidden';
+            spread.className = 'hidden';
+        } 
+    } else if (contact) {
+        if (contact.className == 'hidden') {
+            contact.className = 'unhidden';
+            spread.className = 'hidden';
+            about.className = 'hidden';
+        }
+    } else if (spread) {
+        if (spread.className == 'hidden') {
+            spread.className = 'unhidden';
+            contact.className = 'hidden';
+            about.className = 'hidden';
+        }
+    }
+}
+var sections = document.getElementsByClassName('hiddenSections');
+for (var element = 0; element < sections.length; element++) {
+    sections[element].addEventListener("click", showSection);
+}
+
+logOut = function() {
+    var currentUserIndex = "";
+    localStorage.setItem("current login", JSON.stringify(currentUserIndex));
+}
+window.onload = logOut();

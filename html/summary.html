@@ -6,43 +6,47 @@
     <link rel="stylesheet" type="text/css" href="../css/summary.css">
 </head>
 <body>
-    <h1 id="header">Order Summary</h1>
-    <section id="instructions">
-        <div id="review">
-            <h3>Review Your Order here</h3>
-        </div>
-        <div id="where">
-            <h3>Tell Us Where To Send It Then press the button!</h3>
-        </div>
-    </section>
-    <section id="finalize">
-        <fieldset id="summary-container">
-            <legend>Summary</legend>
-            <ul id="sandwich-list">
-                <!-- placeholder lis -->
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </fieldset>
-        <aside id="address-box">
-            <fieldset id="address">
-                <legend>Address</legend>
-                <label for="address-field">Enter Your Address Here</label>
-                <input type="text" id="address-field"><br>
-                <h3 id="please-enter"></h3>
-                <div id="button">
-                    <input id="order-button" type="button" value="Order Sammy!"> 
-                </div>
+    <div id="page-wrapper"> 
+        <h1 id="header">Order Summary</h1>
+        <section id="instructions">
+            <div id="review">
+                <h3>Review Your Order here</h3>
+            </div>
+            <div id="where">
+                <h3>Tell Us Where To Send It Then press the button!</h3>
+            </div>
+        </section>
+        <section id="finalize">
+            <fieldset id="summary-container">
+                <legend>Summary</legend>
+                <ul id="sandwich-list">
+                    <!-- placeholder lis -->
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </fieldset>
-        </aside>
-    </section>
-    <script type="text/javascript" src="../js/summary.js"></script>
+            <aside id="address-box">
+                <form>
+                    <fieldset id="address">
+                        <legend>Address</legend>
+                        <label for="address-field">Enter Your Address Here</label>
+                        <input type="text" id="address-field"><br>
+                        <h3 id="please-enter"></h3>
+                        <div id="button">
+                            <input id="order-button" type="button" value="Order Sammy!"> 
+                        </div>
+                    </fieldset>
+                </form>
+            </aside>
+        </section>
+        <script type="text/javascript" src="../js/summary.js"></script>
+    </div>
 </body>
 </html>

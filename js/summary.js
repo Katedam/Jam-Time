@@ -1,22 +1,16 @@
 console.log('summary.js is pluggeg in'); 
 
-function checkAddress() {
-    var typedAddress = document.getElementById('address-field').value;
-    if(typedAddress === "") {
-        alert("You gotta let us know where to send it!");
-    } 
-}
-document.getElementById('order-button').addEventListener('click', checkAddress);
 
 function localAddress() {
     var userAddress = document.getElementById("address-field").value;
     if(userAddress != "") {
-        window.localStorage.setItem('Address', userAddress);
-        window.location.href='../html/confirm.html'
+        window.localStorage.setItem('address', JSON.stringify(userAddress));
+        window.location.href='../html/confirm.html';
+    } else {
+        document.getElementById("please-enter").innerText = "You gotta let us know where to send it!";
     }
 }
 document.getElementById('order-button').addEventListener('click', localAddress);
-
 
 
 

@@ -59,10 +59,8 @@ function Sandwich(bread, spreads, jams, toppings, cut) {
     this.cut = cut;
 }
 
-// var sandwiches = [];
-//  sandwiches.push(new Sandwich(this.bread, this.spreads, this.jams, this.toppings, this.isGrilled, this.cut));
-//  var makeSammyButton = document.getElementById('makeSammy');
-//makeSammyButton.addEventListener("click", makeSandwich);
+ var makeSammyButton = document.getElementById('makeSammy');
+
  makeSandwich = function() {
     var checkedBread = document.getElementsByClassName('breads');
     for (var breadIndex = 0; breadIndex < checkedBread.length; breadIndex++) {
@@ -104,18 +102,30 @@ function Sandwich(bread, spreads, jams, toppings, cut) {
             console.log(cutChoice);
         } 
     }
-    
-    // var spreadChoice = document.getElementById('spread-choice').value;
-    // var jamChoice = document.getElementById('jam-choice').value;
-    // var extrasChoice = document.getElementById('extras-choice').value;
-    // var grilledChoice = document.getElementById('grilled-choice').value;
-    // var cutChoice = document.getElementById('cut-choice').value;
-    // sandwiches.push(new makeSandwich(breadChoice, spreadChoice, jamChoice, extrasChoice, grilledChoice, cutChoice));
-    // localStorage.setItem('sandwiches', JSON.stringify(sandwiches));
-    // localStorage.setItem("current order", JSON.stringify(sandwiches.length - 1));
-    // window.location.href = '../html/summary.html';
+var user = localStorage.getItem('current login');
+for(var index = 0; index < accounts.length; index++) {
+    if (index == user) {
+        var currentUser = accounts[index];
+        currentUser.addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
+    }
 }
-// makeSammyButton.addEventListener("click", makeSandwich);
+
+// var oldSandwiches = accounts.faves;
+// var newSandwich
+
+localStorage.setItem('accounts', JSON.stringify(currentUser.favoriteSandwiches));
+
+
+
+
+
+// sandwiches.push(new makeSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice));
+// localStorage.setItem('sandwiches', JSON.stringify(sandwiches));
+// localStorage.setItem("accounts", JSON.stringify(sandwiches.length));
+// window.location.href = '../html/summary.html';
+}
+
+makeSammyButton.addEventListener("click", makeSandwich);
 
 function sendOrder() {
     var newSandwich = document.forms[0];

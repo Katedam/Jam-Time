@@ -81,7 +81,7 @@ nav a {
 }
 form {
     margin-left: 10%;
-    margin-top: 20%;
+    margin-top: 5%;
     max-width: 850px;
 }
 fieldset {
@@ -125,19 +125,18 @@ input[type="password"]:focus {
 
 #aboutSection {
     padding: 1em;
-    margin-top: 105px;
+    margin-top: 5%;
     background-color: rgba(60, 18, 8, 0.7);
 }
 
 #contactSection {
     padding: 1em;
-    margin-top: 105px;
+    margin-top: 5%;
     background-color: rgba(60, 18, 8, 0.7);
 }
 
 #food-sources-infoSection {
     background-color: rgba(60, 18, 8, 0.7);
     padding: 1em;
-    margin-top: 105px;
-    height: 600px;
+    margin-top: 10%;
 }

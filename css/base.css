@@ -26,6 +26,7 @@ p {
 form {
     padding: 2em;
     border: 0.5em solid var(--green);
+    font-family:'Arimo', sans-serif;
 }
 fieldset {
     background-color: rgba(60, 18, 8, 0.7);

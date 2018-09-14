@@ -1,7 +1,5 @@
 body {
   background-image: url(../assets/peanut-butter-jelly-mistakes-646.jpg);
-  /* background-repeat: no-repeat;
-  background-size: 100%; */
   overflow-x: hidden;
   margin: 0;
 }
@@ -17,54 +15,45 @@ h1 {
 form {
   padding-left: 0;
   max-width: 20%;
-  margin-left: 2%;
-  margin-bottom: 20px;
+  margin: auto;
+  flex-grow: 1;
 }
 fieldset {
   max-width: 70%;
 }
 #order-page-forms{
   display: flex;  
+  flex-wrap: wrap;
   align-content: space-between;
-}
-#additional-options {
-  display: flex;  
-  align-content: space-between;
+  justify-content: center;
+  align-items: flex-start;
 }
 form.options {
-  max-width: 45%;
-  margin-left: 2%;
+  margin-top: 2%;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-fieldset.add-options {
-  max-width: 70%;
+#button {
+  position: relative;
+  border: none;
+}
+#button img {
+  width: 250px;
+}
+#button img:hover{
+  width: 275px;
 }
 input[type="button"] {
-  max-width: 28%;
-  position: relative;
-  left: 20%;
+  position: absolute;
+  top: 66px;
+  left: -5%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #fbfdf7;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  font-family:'Delius Unicase', cursive;
 }
-
-
-
-
-
-
-
-
-/* h3 {
-  color: purple;
+input[type="button"]:hover {
+  background-color: transparent;
 }
-
-input {
-    font-family: 'Arimo', sans-serif;
-    color: var(--red);
-}
-
-legend {
-  float: flex;
-}
-
-#move-to-summary-button {
-    float: right;
-    margin-right: 200px;
-} */

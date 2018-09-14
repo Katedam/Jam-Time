@@ -1,10 +1,30 @@
 console.log('summary.js is pluggeg in'); 
 
 function checkLocal() {
-    var localAccounts = localStorage.getItem('current login');
-    // var showSummary = localAccounts
-    console.log(localAccounts);
+    var userIndex = JSON.parse(localStorage.getItem('current login'));
+    var user = JSON.parse(localStorage.getItem('accounts'))[userIndex];
+    var sandwichIndex = user.favoriteSandwiches.length - 1;
+    var madeSandwich = user.favoriteSandwiches[sandwichIndex];
+
+    var showSummary = document.getElementById("sandwich-list");
+    var spitSummary = document.createElement("li");
+    spitSummary.innerText = madeSandwich.bread;
+    showSummary.appendChild(spitSummary); 
+    spitSummary = document.createElement("li");
+    spitSummary.innerText = madeSandwich.spreads;
+    showSummary.appendChild(spitSummary);
+    spitSummary = document.createElement('li');
+    spitSummary.innerText = madeSandwich.jams;
+    showSummary.appendChild(spitSummary);
+    spitSummary = document.createElement("li");
+    spitSummary.innerText = madeSandwich.toppings;
+    showSummary.appendChild(spitSummary);
+    spitSummary = document.createElement("li");
+    spitSummary.innerText = madeSandwich.isGrilled;
+    showSummary.appendChild(spitSummary);
+      
 }
+checkLocal();
 
 
 function localAddress() {
@@ -17,11 +37,6 @@ function localAddress() {
     }
 }
 document.getElementById('order-button').addEventListener('click', localAddress);
-
-
-
-
-//checkLocal will check local storage for account information, and parse it into a variable.
 
 
 // function changePic(interval, frames) {

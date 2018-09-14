@@ -1,17 +1,80 @@
+body {
+  background-image: url(../assets/peanut-butter-jelly-mistakes-646.jpg);
+  overflow-x: hidden;
+  margin: 0;
+}
+h1 {
+  font-size: 100px;
+  position: relative;
+  left: 15%;
+  top: 5%;
+  color: #fbfdf7;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
 h3 {
-  color: purple;
+  font-size: 14px;
+  margin: 0 0;
 }
-
-input {
-    font-family: 'Arimo', sans-serif;
-    color: var(--red);
+form {
+  padding-left: 0;
+  max-width: 20%;
+  margin: auto;
+  flex-grow: 1;
 }
-
-legend {
-  float: flex;
+fieldset {
+  max-width: 70%;
 }
-
-#move-to-summary-button {
-    float: right;
-    margin-right: 200px;
+label {
+  cursor: pointer;
+  float: left;
+  width: 123px;
+  margin-right: 10px;
+  /* text-align: right; */
+  margin: 6px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+  float: left;
+  margin: 9px;
+}
+#order-page-forms{
+  display: flex;  
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+  align-items: flex-start;
+}
+form.options {
+  margin-top: 2%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#button {
+  cursor: pointer;
+  position: relative;
+  border: none;
+}
+#button img {
+  width: 250px;
+}
+#button img:hover{
+  width: 275px;
+}
+input[type="button"] {
+  position: absolute;
+  top: 66px;
+  left: -5%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #fbfdf7;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  font-family:'Delius Unicase', cursive;
+  cursor: pointer;
+}
+input[type="button"]:hover {
+  background-color: transparent;
+  font-size: 22px;
 }

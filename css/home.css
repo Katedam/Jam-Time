@@ -1,10 +1,10 @@
 body {
-    position: relative;
     background-image: url("../assets/PBJ.jpg");
     background-repeat: repeat-y;
     background-size: cover;
     overflow-x: hidden;
-    height: 100vh;
+    margin: 0;
+    position: relative;
 }
 p {
     color: var(--cream);
@@ -19,14 +19,13 @@ h4 {
     left: 0;
     right: 0; 
     margin-bottom: 5%;
+    padding-top: 10%;
 }
 #header-logo .logo {
     font-size: 200px;
     position: relative;
     left: 18%;
     top: 18%;
-    color: #fbfdf7;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     margin: 0;
     width: 66%;
 }

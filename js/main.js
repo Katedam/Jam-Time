@@ -16,6 +16,7 @@ function Sandwich(bread, spreads, jams, toppings, cut) {
     this.isGrilled = false;
     this.cut = cut;
 }
+var accounts = [];
 
 //add sandwich to unique user account, to call: accounts[index].addFaveSandwich(pass arguments);
 UserAccount.prototype.addFaveSandwich = function(bread, spreads, jams, toppings, cut) {
@@ -23,7 +24,6 @@ UserAccount.prototype.addFaveSandwich = function(bread, spreads, jams, toppings,
 } 
 
 //array to store user account objects
-var accounts = [];
 if (localStorage.getItem('accounts') !== null) {
     accounts = JSON.parse(localStorage.getItem('accounts'));
 } else {

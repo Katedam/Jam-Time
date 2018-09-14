@@ -2,9 +2,7 @@ function welcomeUser() {
   var text = "";
   if (navigator.orderpage.html == true) {
       text = "You hungry, pal?";
-  } //else {
-    //  text = "Cookies are not enabled.";
-//  }
+    }
   document.getElementById("welcome").innerHTML = text;
 }
 
@@ -89,15 +87,13 @@ makeSandwich = function() {
     }
     var user = localStorage.getItem('current login');
     for(var index = 0; index < accounts.length; index++) {
-    if (index == user) {
-        var currentUser = accounts[index];
-        currentUser.addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
+        if (index == user) {
+            var currentUser = accounts[index];
+            currentUser.addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
+        }
     }
-    }
-
 
     localStorage.setItem('accounts', JSON.stringify(accounts));
-
 
     window.location.href = '../html/summary.html';
 }
@@ -117,15 +113,4 @@ function sendOrder() {
     }
     document.getElementById("order").value = "You ordered a sammy with: " + txt;
 }
- //function welcomeUser() {
-//    var text = "";
-//    if (navigator.orderpage.html == true) {
-//        text = "Welcome!";
-    //} //else {
-      //  text = "Cookies are not enabled.";
-  //  }
-//    document.getElementById("You Hungry, Pal?").innerHTML = text;
-//};
- window.onload = loadUserName();
-  //window.addEventListener()
-//</script>
+

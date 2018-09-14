@@ -11,11 +11,8 @@ var user = localStorage.getItem('current login');
 for (var index = 0; index < accounts.length; index++) {
      if (index == user) {
         var currentUser = accounts[index];
-        document.getElementById('add-user-name').innerText = "Hiya, " + currentUser.lastName + ", welcome back!";
+        document.getElementById('add-user-name').innerText = "Hiya, " + currentUser.username + ", welcome back! Would you like to reorder one of your faves?";
         var faves = document.getElementById('fave-sandwiches');
-        var header = document.createElement('h3');
-        header.innerText = "Would you like to reorder one of your faves?";
-        faves.appendChild(header);
         for (var jam = 0; jam < currentUser.favoriteSandwiches.length; jam++) {
             var list = document.createElement('ul');
             var sandwich = document.createElement('li');

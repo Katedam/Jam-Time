@@ -12,18 +12,47 @@ h1 {
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   margin: 0;
 }
+#fave-sandwiches {
+  background-color: rgba(60, 18, 8, 0.7);
+  border: 5px solid var(--green);
+  width: 50%;
+  margin-left: 23%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
 h3 {
-  font-size: 14px;
-  margin: 0 0;
+  font-family: 'Arimo', sans-serif;
+  font-size: 18px;
+  color: #CFB7A2;
+  padding: 10px;
+  text-align: center;
+}
+#fave-sandwiches ul {
+  padding-bottom: 5px;
+  margin-top: 0;
+  margin-left: 2px;
+  margin-bottom: 2px;
+  width: 130px;
+}
+#fave-sandwiches li {
+  list-style: none;
+  font-family: 'Arimo', sans-serif;
+  color: white;
+}
+fieldset h3 {
+  margin: 0;
+  padding: 0;
+  width: 50%;
 }
 form {
-  padding-left: 0;
   max-width: 20%;
   margin: auto;
   flex-grow: 1;
 }
 fieldset {
   max-width: 70%;
+  padding: 5px 5px 10px 45px;
 }
 label {
   cursor: pointer;
@@ -59,22 +88,24 @@ form.options {
 #button img {
   width: 250px;
 }
-#button img:hover{
+/* #button img:hover{
   width: 275px;
-}
+} */
 input[type="button"] {
   position: absolute;
-  top: 66px;
+  top: 50px;
   left: -5%;
   width: 100%;
   background: transparent;
   border: none;
-  color: #fbfdf7;
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  color: #80280F;
+  text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
   font-family:'Delius Unicase', cursive;
   cursor: pointer;
+  font-size: 20px;
 }
 input[type="button"]:hover {
   background-color: transparent;
-  font-size: 22px;
+  color: #80280F;
+  font-size: 30px;
 }

@@ -1,5 +1,11 @@
 console.log('summary.js is pluggeg in'); 
 
+function checkLocal() {
+    var localAccounts = localStorage.getItem('current login');
+    // var showSummary = localAccounts
+    console.log(localAccounts);
+}
+
 
 function localAddress() {
     var userAddress = document.getElementById("address-field").value;
@@ -17,9 +23,6 @@ document.getElementById('order-button').addEventListener('click', localAddress);
 
 //checkLocal will check local storage for account information, and parse it into a variable.
 
-// function checkLocal() {
-//     var localAccounts = JSON.parse(localStorage.getItem('account'));
-// }
 
 // function changePic(interval, frames) {
 //     var int = 1;

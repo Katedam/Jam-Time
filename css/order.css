@@ -1,7 +1,9 @@
 body {
-  background-image: url(../assets/pbjGourmet.jpg);
+  background-image: url(../assets/peanut-butter-jelly-mistakes-646.jpg);
   /* background-repeat: no-repeat;
   background-size: 100%; */
+  overflow-x: hidden;
+  margin: 0;
 }
 h1 {
   font-size: 100px;
@@ -12,12 +14,13 @@ h1 {
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   margin: 0;
 }
-form.ingredients {
+form {
   padding-left: 0;
   max-width: 20%;
   margin-left: 2%;
+  margin-bottom: 20px;
 }
-fieldset.ingredients {
+fieldset {
   max-width: 70%;
 }
 #order-page-forms{
@@ -37,7 +40,8 @@ fieldset.add-options {
 }
 input[type="button"] {
   max-width: 28%;
-
+  position: relative;
+  left: 20%;
 }
 
 

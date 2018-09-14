@@ -7,89 +7,106 @@
   </head>
   <body>
     <h2 id="welcome">You hungry, pal?</h2>
-    <h1>~Make Your Sandwich~</h1>
+    <h1>Build Your Sandwich</h1>
     <h3 id="add-user-name"></h3>
     <div id="fave-sandwiches"></div>
     <section id="order-page-forms">
-  <form name="ingredient-lists" action="/action_page.php">
+  <form>
     <fieldset>
       <legend>breads</legend>
       <h3 id="bread-choice">choose your bread:</h3>
-      <input class="breads" type="radio" name="breads" value="Brioche"> Brioche
-      <input class="breads" type="radio" name="breads" value="Classic White"/> Classic White
-      <input class="breads" type="radio" name="breads" value="Gluten Free White"/> Gluten Free White
-      <input class="breads" type="radio" name="breads" value="Cinnamon Raisin Swirl"/> Cinnamon Raisin Swirl
-      <input class="breads" type="radio" name="breads" value="Bagel"/> Bagel
-      <input class="breads" type="radio" name="breads" value="Teff Wrap"/> Teff Wrap without Honey
-      <input class="breads" type="radio" name="breads" value="English Muffin"/> English Muffin
+      <label for="brioche">Brioche</label>
+      <input class="breads" type="radio" id="brioche" value="Brioche"> 
+      <label for="white">Classic White</label>
+      <input class="breads" type="radio" id="white" value="Classic White">
+      <label for="Gluten-free White">Gluten-free White</label>
+      <input class="breads" type="radio" id="gfWhite" value="Gluten Free White">
+      <label for="Cinnamon Raisin Swirl">Cinnamon Raisin Swirl</label>
+      <input class="breads" type="radio" id="swirl" value="Cinnamon Raisin Swirl">
+      <label for="bagel">Bagel</label>
+      <input class="breads" type="radio" id="bagel" value="Bagel">
+      <label for="teff">Teff Wrap without Honey</label>
+      <input class="breads" type="radio" id="teff" value="Teff Wrap">
+      <label for="muffin">English Muffin</label>
+      <input class="breads" type="radio" id="muffin" value="English Muffin">
     </fieldset>
+  </form>
+  <form>
     <fieldset>
       <legend>spreads</legend>
       <h3 id="spread-choice">select up to two spreads:</h3>
-      <input class="spreads" type="checkbox" name="spreads" value="Crunchy Peanut Butter" checked="checked"/> Crunchy Peanut Butter
-      <input class="spreads" type="checkbox" name="spreads" value="Smooth Peanut Butter"/> Smooth Peanut Butter
-      <input class="spreads" type="checkbox" name="spreads" value="Almond Butter"/> Almond Butter
-      <input class="spreads" type="checkbox" name="spreads" value="Almond Butter"/> Almond Butter
-      <input class="spreads" type="checkbox" name="spreads" value="Sunflower Butter"/> Sunflower Butter
-      <input class="spreads" type="checkbox" name="spreads" value="Cashew Nut Butter"/> Cashew Nut Butter
+      <label for="crunchyPB">Crunchy Peanut Butter</label>
+      <input class="spreads" type="checkbox" id="crunchyPB" value="Crunchy Peanut Butter">
+      <label for="smoothPB">Smooth Peanut Butter</label>
+      <input class="spreads" type="checkbox" id="smoothPB" value="Smooth Peanut Butter">
+      <label for="almond">Almond Butter</label>
+      <input class="spreads" type="checkbox" id="almond" value="Almond Butter">
+      <label for="hazelnut">Hazelnut Butter</label>
+      <input class="spreads" type="checkbox" id="hazelnut" value="Almond Butter">
+      <label for="sunflower">Sunflower Seed Butter</label>
+      <input class="spreads" type="checkbox" id="sunflower" value="Sunflower Butter">
+      <label for="cashew">Cashew Nut Butter</label>
+      <input class="spreads" type="checkbox" id="cashew" value="Cashew Nut Butter">
     </fieldset>
+  </form>
+  <form>
     <fieldset>
       <legend>jams</legend>
       <h3 id="jam-choice">Select up to two jams:</h3>
-      <input class="jams" type="checkbox" name="jams" value="Grape Jelly" checked="checked"/> Grape Jelly
-      <input class="jams" type="checkbox" name="jams" value="Strawberry Jam"/> Strawberry Jam
-      <input class="jams" type="checkbox" name="jams" value="Apricot Preserves"/> Apricot Preserves
-      <input class="jams" type="checkbox" name="jams" value="Marionberry"/> Marionberry
-      <input class="jams" type="checkbox" name="jams" value="Orange Marmalade"/> Orange Marmalade
-      <input class="jams" type="checkbox" name="jams" value="Mixed Berry"/> Mixed Berry
+      <label for="grape">Grape Jelly</label>
+      <input class="jams" type="checkbox" id="grape" value="Grape Jelly">
+      <label for="strawberry">Strawberry Jam</label>
+      <input class="jams" type="checkbox" id="strawberry" value="Strawberry Jam">
+      <label for="apricot">Apricot Preserves</label>
+      <input class="jams" type="checkbox" id="apricot" value="Apricot Preserves">
+      <label for="marionberry">Marionberry Jam</label>
+      <input class="jams" type="checkbox" id="marionberry" value="Marionberry">
+      <label for="orange">Orange Marmalade</label>
+      <input class="jams" type="checkbox" id="orange" value="Orange Marmalade"> 
+      <label for="mixed">Mixed Berry Jam</label>
+      <input class="jams" type="checkbox" id="mixed" value="Mixed Berry">
     </fieldset>
+  </form>
+  <form>
     <fieldset>
       <legend>want extras?</legend>
       <h3 id="extras-choice"></h3>
-      <input class="extras" type="checkbox" name="extras" value="Banana" checked="checked"/>Bananas
-      <input class="extras" type="checkbox" name="extras" value="Nutella"/> Nutella
-      <input class="extras" type="checkbox" name="extras" value="Chocolate Chips"/> Chocolate Chips
-      <input class="extras" type="checkbox" name="extras" value="Raisins"/> Raisins
-      <input class="extras" type="checkbox" name="extras" value="Honey"/> Honey
-      <input class="extras" type="checkbox" name="extras" value="Coconut Flakes"/> Coconut Flakes
-      <input class="extras" type="checkbox" name="extras" value="Butterscotch Chips"/> Butterscotch Chips
-    </fieldset>
-    <fieldset>
-      <h3 id="grilled-choice">ya want it grilled?</h3>
-      <input id="grilled" type="checkbox" name="grilled" value="Grilled"/>GRILL IT!
-    </fieldset>
-    <fieldset>
-      <h3 id="cut-choice">cut choice</h3>
-      <input class="cuts" type="radio" name="cut" value="vertical"/>Vertical
-      <input class="cuts" type="radio" name="cut" value="diagonal"/>Diagonal
-      <input class="cuts" type="radio" name="cut" value="no cut"/>No Cut
-      <input class="cuts" type="radio" name="cut" value="no crusts"/>No Crust
+      <label for="bananas">Bananas</label>
+      <input class="extras" type="checkbox" id="bananas" value="Banana">
+      <label for="nutella">Nutella</label>
+      <input class="extras" type="checkbox" id="nutella" value="Nutella">
+      <label for="chips">Chocolate Chips</label>
+      <input class="extras" type="checkbox" id="chips" value="Chocolate Chips">
+      <label for="raisins">Raisins</label>
+      <input class="extras" type="checkbox" id="raisins" value="Raisins">
+      <label for="honey">Honey</label>
+      <input class="extras" type="checkbox" id="honey" value="Honey">
+      <label for="coconut">Coconut Flakes</label>
+      <input class="extras" type="checkbox" id="coconut" value="Coconut Flakes">
+      <label for="buterscotch">Butterscotch Chips</label>
+      <input class="extras" type="checkbox" name="extras" value="Butterscotch Chips">
     </fieldset>
   </form>
-
-<!--<form action="/action_page.php">
-  <input type="radio" name="coffee" value="cream">With cream<br>
-  <input type="radio" name="coffee" value="sugar">With sugar<br>
-  <br>
-  <input type="button" onclick="myFunction()" value="Send order">
-  <br><br>
-  <input type="text" id="order" size="50">
-  <input type="submit" value="Submit">
-</form>
-
-<script>
-function myFunction() {
-    var coffee = document.forms[0];
-    var txt = "";
-    var i;
-    for (i = 0; i < coffee.length; i++) {
-        if (coffee[i].checked) {
-            txt = txt + coffee[i].value + " ";
-        }
-    }
-    document.getElementById("order").value = "You ordered a coffee with: " + txt;
-}
-</script>--->
+  <form>
+    <fieldset>
+      <h3 id="grilled-choice">ya want it grilled?</h3>
+      <label for="grilled">Grill it!</label>
+      <input id="grilled" type="checkbox" name="grilled" value="Grilled">
+    </fieldset>
+  </form>
+  <form>
+    <fieldset>
+      <h3 id="cut-choice">cut choice</h3>
+      <label for="vertical">Vertical</label>
+      <input class="cuts" type="radio" id="vertical" value="vertical">
+      <label for="diagonal">Diagonal</label>
+      <input class="cuts" type="radio" id="diagonal" value="diagonal">
+      <label for="none">None</label>
+      <input class="cuts" type="radio" id="none" value="no cut">
+      <label for="nocrust">No Crust</label>
+      <input class="cuts" type="radio" id="nocrust" value="no crusts">
+    </fieldset>
+  </form>
     <input type="text" id="order" size="50">
     <input id="makeSammy" type="button" value="Make Sammy!">
     <script type="text/javascript" src="../js/main.js"></script>
@@ -97,14 +114,3 @@ function myFunction() {
   </section>
 </body>
 </html>
-
-
-<!--H3, empty - to intake guest name OR log-in name with welcome message (make up message as placeholder)
-Div, empty - to intake personal info from log-in (make up fake sandwiches as placeholders)
-Form - radio buttons, breads, h6 - pick one (just show sample items, not actual finished form)
-Form - checkboxes, spreads, h6 - pick up to 2
-Form - checkboxes, jams, h6 - pick up to 2
-Form - checkboxes, toppings - pick up to 2
-Form - checkbox, grilled
-Form - radio buttons, choose cut
-Button Make Sammy!-->

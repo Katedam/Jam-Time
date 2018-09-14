@@ -7,8 +7,6 @@ function UserAccount(username, password, first, last, phone, address) {
     this.address = address;
     this.favoriteSandwiches = [];
 };
-//array to store user account objects
-var accounts = [];
 
 function Sandwich(bread, spreads, jams, toppings, cut) {
     this.bread = bread;
@@ -19,22 +17,26 @@ function Sandwich(bread, spreads, jams, toppings, cut) {
     this.cut = cut;
 }
 
-//fake user accounts
-accounts.push(new UserAccount("katedam", "stickywithit", "Dameron", "Kate", "503-222-1234", "34 N Hazelnut Ave"));
-accounts.push(new UserAccount("ebittyschwinnie", "itsjamtime", "Clarkson", "Elizabeth", "503-322-5678", "77 NE Awesomesauce Ave"));
-accounts.push(new UserAccount("zachary13", "hungryforPBandJ", "Tahsuda", "Zachary", "503-444-4321", "567 SE Marmalade St"));
-
 //add sandwich to unique user account, to call: accounts[index].addFaveSandwich(pass arguments);
 UserAccount.prototype.addFaveSandwich = function(bread, spreads, jams, toppings, cut) {
     this.favoriteSandwiches.push(new Sandwich(bread, spreads, jams, toppings, cut)); 
 } 
 
-//fake favorite sandwiches
-var fakeUser = accounts[2];
-fakeUser.addFaveSandwich("white", "peanut butter", "grape jelly", "bananas", "diagonal");
-fakeUser.addFaveSandwich("bagel", "almond butter", "Marionberry Jam", "coconut flakes", "vertical");
-fakeUser = accounts[0];
-fakeUser.addFaveSandwich("bagel", "almond butter", "Marionberry Jam", "coconut flakes", "vertical");
+//array to store user account objects
+var accounts = [];
+if (localStorage.getItem('accounts') !== null) {
+    accounts = JSON.parse(localStorage.getItem('accounts'));
+} else {
+    accounts.push(new UserAccount("katedam", "stickywithit", "Dameron", "Kate", "503-222-1234", "34 N Hazelnut Ave"));
+    accounts.push(new UserAccount("ebittyschwinnie", "itsjamtime", "Clarkson", "Elizabeth", "503-322-5678", "77 NE Awesomesauce Ave"));
+    accounts.push(new UserAccount("zachary13", "hungryforPBandJ", "Tahsuda", "Zachary", "503-444-4321", "567 SE Marmalade St"));
+    //fake favorite sandwiches
+    var fakeUser = accounts[2];
+    fakeUser.addFaveSandwich("white", "peanut butter", "grape jelly", "bananas", "diagonal");
+    fakeUser.addFaveSandwich("bagel", "almond butter", "Marionberry Jam", "coconut flakes", "vertical");
+    fakeUser = accounts[0];
+    fakeUser.addFaveSandwich("bagel", "almond butter", "Marionberry Jam", "coconut flakes", "vertical");
+}
 
 //use this constructor to store temp data to guestOrderSum array
 function GuestOrder(bread, spreads, jams, toppings, cut) {
@@ -58,9 +60,3 @@ var toppings = ["Bananas", "Nutella", "Chocolate Chips", "Raisins", "Honey", "Co
 var cuts = ["Vertical", "Diagonal", "No Cut", "No Crust"];
 
 localStorage.setItem('accounts', JSON.stringify(accounts));
-
-// function updateAccounts() {
-//     var localAccounts = 
-
-// }
-

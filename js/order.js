@@ -41,29 +41,12 @@ function loadUserName() {
     }
 }
 
+
 window.onload = loadUserName();
+var makeSammyButton = document.getElementById('makeSammy');
 
 
-//<body onload="welcomeUser()">
-//<h2 id="welcome"></p>
-//<script>
-//  window.addEventListener("load", function(event) {
-  //  ;
-//  });
-function Sandwich(bread, spreads, jams, toppings, cut) {
-    this.bread = bread;
-    this.spreads = spreads;
-    this.jams = jams;
-    this.toppings = toppings
-    this.isGrilled = false;
-    this.cut = cut;
-}
-
-// var sandwiches = [];
-//  sandwiches.push(new Sandwich(this.bread, this.spreads, this.jams, this.toppings, this.isGrilled, this.cut));
-//  var makeSammyButton = document.getElementById('makeSammy');
-//makeSammyButton.addEventListener("click", makeSandwich);
- makeSandwich = function() {
+makeSandwich = function() {
     var checkedBread = document.getElementsByClassName('breads');
     for (var breadIndex = 0; breadIndex < checkedBread.length; breadIndex++) {
         if (checkedBread[breadIndex].checked == true) {
@@ -104,18 +87,24 @@ function Sandwich(bread, spreads, jams, toppings, cut) {
             console.log(cutChoice);
         } 
     }
-    
-    // var spreadChoice = document.getElementById('spread-choice').value;
-    // var jamChoice = document.getElementById('jam-choice').value;
-    // var extrasChoice = document.getElementById('extras-choice').value;
-    // var grilledChoice = document.getElementById('grilled-choice').value;
-    // var cutChoice = document.getElementById('cut-choice').value;
-    // sandwiches.push(new makeSandwich(breadChoice, spreadChoice, jamChoice, extrasChoice, grilledChoice, cutChoice));
-    // localStorage.setItem('sandwiches', JSON.stringify(sandwiches));
-    // localStorage.setItem("current order", JSON.stringify(sandwiches.length - 1));
-    // window.location.href = '../html/summary.html';
+    var user = localStorage.getItem('current login');
+    for(var index = 0; index < accounts.length; index++) {
+    if (index == user) {
+        var currentUser = accounts[index];
+        currentUser.addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
+    }
+    }
+
+
+    localStorage.setItem('accounts', JSON.stringify(accounts));
+
+
+    window.location.href = '../html/summary.html';
 }
-// makeSammyButton.addEventListener("click", makeSandwich);
+
+
+
+makeSammyButton.addEventListener("click", makeSandwich);
 
 function sendOrder() {
     var newSandwich = document.forms[0];

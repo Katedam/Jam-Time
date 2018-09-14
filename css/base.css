@@ -21,7 +21,8 @@
 }
 h1 {
     font-family: 'Freckle Face', sans-serif;
-    color: var(--purple);
+    color: #fbfdf7;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 h3 {
     font-family: 'Delius Unicase', cursive;

@@ -12,6 +12,10 @@ h1 {
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   margin: 0;
 }
+h3 {
+  font-size: 14px;
+  margin: 0 0;
+}
 form {
   padding-left: 0;
   max-width: 20%;
@@ -20,6 +24,20 @@ form {
 }
 fieldset {
   max-width: 70%;
+}
+label {
+  cursor: pointer;
+  float: left;
+  width: 123px;
+  margin-right: 10px;
+  /* text-align: right; */
+  margin: 6px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+  float: left;
+  margin: 9px;
 }
 #order-page-forms{
   display: flex;  
@@ -34,6 +52,7 @@ form.options {
   margin-right: 20px;
 }
 #button {
+  cursor: pointer;
   position: relative;
   border: none;
 }
@@ -53,7 +72,9 @@ input[type="button"] {
   color: #fbfdf7;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   font-family:'Delius Unicase', cursive;
+  cursor: pointer;
 }
 input[type="button"]:hover {
   background-color: transparent;
+  font-size: 22px;
 }

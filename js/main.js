@@ -16,16 +16,24 @@ function Sandwich(bread, spreads, jams, toppings, cut) {
     this.isGrilled = false;
     this.cut = cut;
 }
+var accounts = [];
 
 //add sandwich to unique user account, to call: accounts[index].addFaveSandwich(pass arguments);
 UserAccount.prototype.addFaveSandwich = function(bread, spreads, jams, toppings, cut) {
     this.favoriteSandwiches.push(new Sandwich(bread, spreads, jams, toppings, cut)); 
 } 
 
-//array to store user account objects
-var accounts = [];
 if (localStorage.getItem('accounts') !== null) {
-    accounts = JSON.parse(localStorage.getItem('accounts'));
+    var accountData = JSON.parse(localStorage.getItem('accounts'));
+    for (var accountIndex = 0; accountIndex < accountData.length; accountIndex++) {
+        var rawData = accountData[accountIndex];
+        var eachAccount = new UserAccount(rawData.username, rawData.password, rawData.first, rawData.last, rawData.phone, rawData.address);
+        for (var sandwichIndex = 0; sandwichIndex < rawData.favoriteSandwiches.length; sandwichIndex++) {
+            var rawSandwich = rawData.favoriteSandwiches[sandwichIndex];
+            eachAccount.addFaveSandwich(rawSandwich.bread, rawSandwich.spreads, rawSandwich.jams, rawSandwich.toppings, rawSandwich.cut);
+        }
+        accounts.push(eachAccount);
+    }
 } else {
     accounts.push(new UserAccount("katedam", "stickywithit", "Dameron", "Kate", "503-222-1234", "34 N Hazelnut Ave"));
     accounts.push(new UserAccount("ebittyschwinnie", "itsjamtime", "Clarkson", "Elizabeth", "503-322-5678", "77 NE Awesomesauce Ave"));

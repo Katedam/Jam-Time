@@ -41,27 +41,12 @@ function loadUserName() {
     }
 }
 
+
 window.onload = loadUserName();
+var makeSammyButton = document.getElementById('makeSammy');
 
 
-//<body onload="welcomeUser()">
-//<h2 id="welcome"></p>
-//<script>
-//  window.addEventListener("load", function(event) {
-  //  ;
-//  });
-function Sandwich(bread, spreads, jams, toppings, cut) {
-    this.bread = bread;
-    this.spreads = spreads;
-    this.jams = jams;
-    this.toppings = toppings
-    this.isGrilled = false;
-    this.cut = cut;
-}
-
- var makeSammyButton = document.getElementById('makeSammy');
-
- makeSandwich = function() {
+makeSandwich = function() {
     var checkedBread = document.getElementsByClassName('breads');
     for (var breadIndex = 0; breadIndex < checkedBread.length; breadIndex++) {
         if (checkedBread[breadIndex].checked == true) {
@@ -102,28 +87,22 @@ function Sandwich(bread, spreads, jams, toppings, cut) {
             console.log(cutChoice);
         } 
     }
-var user = localStorage.getItem('current login');
-for(var index = 0; index < accounts.length; index++) {
+    var user = localStorage.getItem('current login');
+    for(var index = 0; index < accounts.length; index++) {
     if (index == user) {
         var currentUser = accounts[index];
         currentUser.addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
     }
+    }
+
+
+    localStorage.setItem('accounts', JSON.stringify(accounts));
+
+
+    window.location.href = '../html/summary.html';
 }
 
-// var oldSandwiches = accounts.faves;
-// var newSandwich
 
-localStorage.setItem('accounts', JSON.stringify(currentUser.favoriteSandwiches));
-
-
-
-
-
-// sandwiches.push(new makeSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice));
-// localStorage.setItem('sandwiches', JSON.stringify(sandwiches));
-// localStorage.setItem("accounts", JSON.stringify(sandwiches.length));
-// window.location.href = '../html/summary.html';
-}
 
 makeSammyButton.addEventListener("click", makeSandwich);
 

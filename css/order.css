@@ -1,5 +1,44 @@
+body {
+  background-image: url(../assets/pbjGourmet.jpg);
+  /* background-repeat: no-repeat;
+  background-size: 100%; */
+}
+h1 {
+  font-size: 100px;
+  position: relative;
+  left: 15%;
+  top: 5%;
+  color: #fbfdf7;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+form.ingredients {
+  padding-left: 0;
+  max-width: 20%;
+  margin-left: 2%;
+}
+fieldset.ingredients {
+  max-width: 70%;
+}
+#order-page-forms{
+  display: flex;  
+  align-content: space-between;
+}
+#additional-options {
+  display: flex;  
+  align-content: space-between;
+}
+form.options {
+  max-width: 45%;
+  margin-left: 2%;
+}
+fieldset.add-options {
+  max-width: 70%;
+}
+input[type="button"] {
+  max-width: 28%;
 
-
+}
 
 
 

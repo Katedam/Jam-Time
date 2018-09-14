@@ -6,13 +6,14 @@
     <link href="../css/order.css" rel="stylesheet">
   </head>
   <body>
-    <h2 id="welcome">You hungry, pal?</h2>
+  <div id="page-wrapper">
+        <h2 id="welcome">You hungry, pal?</h2>
     <h1>Build Your Sandwich</h1>
     <h3 id="add-user-name"></h3>
     <div id="fave-sandwiches"></div>
-    <section id="order-page-forms">
-  <form>
-    <fieldset>
+<section id="order-page-forms">
+  <form class="ingredients">
+    <fieldset class="ingredients">
       <legend>breads</legend>
       <h3 id="bread-choice">choose your bread:</h3>
       <label for="brioche">Brioche</label>
@@ -31,8 +32,8 @@
       <input class="breads" type="radio" id="muffin" value="English Muffin">
     </fieldset>
   </form>
-  <form>
-    <fieldset>
+  <form class="ingredients">
+    <fieldset class="ingredients">
       <legend>spreads</legend>
       <h3 id="spread-choice">select up to two spreads:</h3>
       <label for="crunchyPB">Crunchy Peanut Butter</label>
@@ -49,8 +50,8 @@
       <input class="spreads" type="checkbox" id="cashew" value="Cashew Nut Butter">
     </fieldset>
   </form>
-  <form>
-    <fieldset>
+  <form class="ingredients">
+    <fieldset class="ingredients">
       <legend>jams</legend>
       <h3 id="jam-choice">Select up to two jams:</h3>
       <label for="grape">Grape Jelly</label>
@@ -67,8 +68,8 @@
       <input class="jams" type="checkbox" id="mixed" value="Mixed Berry">
     </fieldset>
   </form>
-  <form>
-    <fieldset>
+  <form class="ingredients">
+    <fieldset class="ingredients">
       <legend>want extras?</legend>
       <h3 id="extras-choice"></h3>
       <label for="bananas">Bananas</label>
@@ -87,15 +88,17 @@
       <input class="extras" type="checkbox" name="extras" value="Butterscotch Chips">
     </fieldset>
   </form>
-  <form>
-    <fieldset>
+</section>
+<section id="additional-options">
+  <form class="options">
+    <fieldset class="add-options">
       <h3 id="grilled-choice">ya want it grilled?</h3>
       <label for="grilled">Grill it!</label>
       <input id="grilled" type="checkbox" name="grilled" value="Grilled">
     </fieldset>
   </form>
-  <form>
-    <fieldset>
+  <form class="options">
+    <fieldset class="add-options">
       <h3 id="cut-choice">cut choice</h3>
       <label for="vertical">Vertical</label>
       <input class="cuts" type="radio" id="vertical" value="vertical">
@@ -107,10 +110,11 @@
       <input class="cuts" type="radio" id="nocrust" value="no crusts">
     </fieldset>
   </form>
-    <input type="text" id="order" size="50">
+</section>
     <input id="makeSammy" type="button" value="Make Sammy!">
     <script type="text/javascript" src="../js/main.js"></script>
     <script type="text/javascript" src="../js/order.js"></script>
-  </section>
+  </div>
+
 </body>
 </html>

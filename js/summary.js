@@ -3,7 +3,7 @@ console.log('summary.js is pluggeg in');
 function checkLocal() {
     var userIndex = JSON.parse(localStorage.getItem('current login'));
     var user = JSON.parse(localStorage.getItem('accounts'))[userIndex];
-    var guestLogin = JSON.parse(localStorage.getItem('guest-login'));
+    // var guestLogin = JSON.parse(localStorage.getItem('guest-login'));
     var sandwichIndex = user.favoriteSandwiches.length - 1;
     var madeSandwich = user.favoriteSandwiches[sandwichIndex];
 

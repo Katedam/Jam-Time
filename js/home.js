@@ -35,7 +35,8 @@ getRegistrationButton.addEventListener("click", addUserAccount);
 var getGuestLogin = document.getElementById('guestLogin');
 var getLoginButton = document.getElementById('loginButton');
 loadOrderPage = function(){ 
-    if (getLoginButton) {
+    var clickedId = event.target.id;
+    if (clickedId == 'getLoginButton') {
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
         for (var index = 0; index < accounts.length; index++) {
@@ -48,7 +49,7 @@ loadOrderPage = function(){
             document.getElementById('not-a-match').innerText = "Username or password does not match";
             } 
         } 
-    } if (getGuestLogin) {
+    } if (clickedId == 'getGuestLogin') {
         var guestUser = guestUser;
         localStorage.setItem('guest-login', JSON.stringify(guestUser));
         console.log(guestUser);
@@ -114,7 +115,7 @@ for (var element = 0; element < sections.length; element++) {
 }
 
 logOut = function() {
-    var currentUserIndex = "";
+    var currentUserIndex = "guest";
     localStorage.setItem("current login", JSON.stringify(currentUserIndex));
 }
 window.onload = logOut();

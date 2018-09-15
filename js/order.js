@@ -98,8 +98,12 @@ makeSandwich = function() {
     }
     localStorage.setItem('accounts', JSON.stringify(accounts));
 
-    var guestUser = localStorage.getItem('guest-login');
-    guestUser.addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
+    var guestUser = localStorage.getItem('current login');
+    if('guest' == 'guestUser') {
+        accounts[0].addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
+        console.log(guestUser);
+
+    }
 
     window.location.href = '../html/summary.html';
 }

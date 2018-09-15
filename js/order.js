@@ -11,29 +11,33 @@ var user = localStorage.getItem('current login');
 for (var index = 0; index < accounts.length; index++) {
      if (index == user) {
         var currentUser = accounts[index];
-        document.getElementById('add-user-name').innerText = "Hiya, " + currentUser.lastName + ", welcome back!";
+        document.getElementById('add-user-name').innerText = "Hi, " + currentUser.username + ", welcome back! Would you like to reorder one of your faves?";
         var faves = document.getElementById('fave-sandwiches');
-        var header = document.createElement('h3');
-        header.innerText = "Would you like to reorder one of your faves?";
-        faves.appendChild(header);
-        for (var jam = 0; jam < currentUser.favoriteSandwiches.length; jam++) {
-            var list = document.createElement('ul');
-            var sandwich = document.createElement('li');
-            sandwich.innerText = currentUser.favoriteSandwiches[jam].spreads
-            list.appendChild(sandwich);
-            sandwich = document.createElement('li');
-            sandwich.innerText = currentUser.favoriteSandwiches[jam].jams;
-            list.appendChild(sandwich);
-            sandwich = document.createElement('li');
-            sandwich.innerText = currentUser.favoriteSandwiches[jam].toppings;
-            list.appendChild(sandwich);
-            sandwich = document.createElement('li');
-            sandwich.innerText = "on " + currentUser.favoriteSandwiches[jam].bread;
-            list.appendChild(sandwich);
-            sandwich = document.createElement('li');
-            sandwich.innerText = "cut " + currentUser.favoriteSandwiches[jam].cut;
-            list.appendChild(sandwich);
-            faves.appendChild(list);
+        for (var sandwichIndex = 0; sandwichIndex < currentUser.favoriteSandwiches.length; sandwichIndex++) {
+            // var icon = document.createElement('img');
+            // icon.setAttribute('src', '../assets/bread.png');
+            // faves.appendChild(icon);
+            var sandwichlist = document.createElement('p');
+            var ingredient = currentUser.favoriteSandwiches[sandwichIndex];
+            sandwichlist.innerText = ingredient.spreads + ", " + ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread; 
+            faves.appendChild(sandwichlist);
+            // var list = document.createElement('ul');
+            // var sandwich = document.createElement('li');
+            // sandwich.innerText = currentUser.favoriteSandwiches[sandwichIndex].spreads + ",";
+            // list.appendChild(sandwich);
+            // sandwich = document.createElement('li');
+            // sandwich.innerText = currentUser.favoriteSandwiches[sandwichIndex].jams + ",";
+            // list.appendChild(sandwich);
+            // sandwich = document.createElement('li');
+            // sandwich.innerText = "& " + currentUser.favoriteSandwiches[sandwichIndex].toppings;
+            // list.appendChild(sandwich);
+            // sandwich = document.createElement('li');
+            // sandwich.innerText = "on " + currentUser.favoriteSandwiches[sandwichIndex].bread;
+            // list.appendChild(sandwich);
+            // // sandwich = document.createElement('li');
+            // // sandwich.innerText = currentUser.favoriteSandwiches[sandwichIndex].cut;
+            // // list.appendChild(sandwich);
+            // faves.appendChild(list);
             }
         }
     }

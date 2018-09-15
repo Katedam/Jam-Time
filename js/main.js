@@ -40,10 +40,10 @@ if (localStorage.getItem('accounts') !== null) {
     accounts.push(new UserAccount("zachary13", "hungryforPBandJ", "Tahsuda", "Zachary", "503-444-4321", "567 SE Marmalade St"));
     //fake favorite sandwiches
     var fakeUser = accounts[2];
-    fakeUser.addFaveSandwich("white", "peanut butter", "grape jelly", "bananas", "diagonal");
-    fakeUser.addFaveSandwich("bagel", "almond butter", "Marionberry Jam", "coconut flakes", "vertical");
+    fakeUser.addFaveSandwich("Classic White", "Creamy PB", "Grape Jelly", "Bananas", "Diagonal");
+    fakeUser.addFaveSandwich("Bagel", "Almond butter", "Marionberry Jam", "Coconut flakes", "Vertical");
     fakeUser = accounts[0];
-    fakeUser.addFaveSandwich("bagel", "almond butter", "Marionberry Jam", "coconut flakes", "vertical");
+    fakeUser.addFaveSandwich("Bagel", "Almond butter", "Marionberry Jam", "Coconut flakes", "Vertical");
 }
 
 //use this constructor to store temp data to guestOrderSum array

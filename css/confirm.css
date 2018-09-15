@@ -1,45 +1,49 @@
 body { background: url(../assets/mitch-lensink-588486-unsplash.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
+    /* -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover; */
   background-size: cover;
+  margin: 0;
 }
-
-/* #c2 { background: url(../assets/tuce-629552-unsplash.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
-
+h3 {
+    margin: 5px;
+}
 .heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 100px;
+    margin-top: 0;
+    padding-top: 0.7em;
+    font-size: 73px;
+    margin-left: 20%;
+    margin-bottom: 0.3em;
 }
-
 #sending-sandy {
-    background-color: rgba(128, 128, 128, .8);
+    background-color: rgba(60, 18, 8, 0.7);
     border: solid 2px;
-    border-radius: 2px;
-    border-color: #A77D63;
-}
-#delivery-bike {
-    border: solid 2px;
-    border-radius: 2px;
-    border-color: #382723;
-    background-color: rgba(128, 128, 128, .8);
-    margin-top: 290px;
+    border-radius: 5px;
+    border-color: var(--tan);
+    width: 40%;
+    margin-left: 22%;
+    /* padding-left: 1em; */
+    position: relative;
+    left: 87px;
+    bottom: 0;
+    height: 81px;
 }
 
+#delivery-bike {
+    height: 389px;
+    padding-bottom: 8em;
+    /* border: solid 2px;
+    border-radius: 2px;
+    border-color: var(--tan);
+    background-color: rgba(60, 18, 8, 0.7);
+    margin-top: 290px; */
+}
 #bike {
-    opacity: 1;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    /* opacity: 1; */
+    /* display: block; */
+    /* margin-left: 33%; */
+    /* margin-right: auto; */
     width: 40%;
+    /* align-items: center; */
+    margin-left: 29%;
 }

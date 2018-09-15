@@ -1,16 +1,29 @@
-body { background: url(../assets/amy-shamblen-765182-unsplash.jpg) no-repeat center center fixed; }
-
-
-/* #b1 { background: hsl(0, 50%, 50%); } */
-/* #b3 { background: url(../assets/olia-gozha-54488-unsplash.jpg) no-repeat center center fixed; } */
-
-/* body { */
-    /* background: url(../assets/amy-shamblen-765182-unsplash.jpg) no-repeat center center fixed; */
-    /* background: url(../assets\olia-gozha-54488-unsplash.jpg) no-repeat center center fixed; */
-    /* width: 100%;
-    height: auto;
-} */
-
+body { 
+    background: url(../assets/amy-shamblen-765182-unsplash.jpg) no-repeat center center fixed; 
+    margin: 0;
+}
+form {
+    width: 30%;
+}
+fieldset {
+    width: 93%;
+    height: 207px;
+    box-sizing: border-box;
+}
+img {
+    float: left;
+}
+ul {
+    list-style: none;
+    font-family: 'Arimo', sans-serif;
+    color: var(--cream);
+    margin-left: 49px;
+    margin-top: 0;
+}
+li {
+    padding-bottom: 5px;
+    font-size: 20px;
+}
 #header {
     display: flex;
     align-items: center;
@@ -20,17 +33,19 @@ body { background: url(../assets/amy-shamblen-765182-unsplash.jpg) no-repeat cen
     margin-top: 0;
     width: 50%;
     height: 90px;
-    font-size: 4em;
+    font-size: 80px;
+    padding-top: 1em;
 }
 
 #instructions {
     display: flex;
+    width: 30%;
 }
 
 #review {
     justify-content: flex-start;
-    width: 52%;
     margin: 70px;
+    width: 30%;
 }
 
 #where {
@@ -41,30 +56,9 @@ body { background: url(../assets/amy-shamblen-765182-unsplash.jpg) no-repeat cen
 
 #finalize {
     display: flex;
-}
-
-#summary-container{
-    width: 49%;
-    right: 50%;
-    justify-content: flex-start;
-    margin: 5px;
-    /* border-color: #DC9023;
-    border-radius: 3px; */
-}
-
-#address-box {
-    display: flex;
-    width: 50%;
-    right: 100%;
-    margin: 5px;
-}
-
-#address {
-    /* display: flex; */
-    /* width: 100%; */
-    right: 50%;
-    /* border-color: #DC9023;
-    border-radius: 3px; */
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 2em;
 }
 
 #button {

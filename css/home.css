@@ -86,13 +86,13 @@ nav a {
     display: block;
 }
 form {
-    margin-left: 10%;
+    margin-left: 32%;
     margin-top: 5%;
-    max-width: 850px;
+    max-width: 32%;
 }
 fieldset {
     background-color: rgba(60, 18, 8, 0.7);
-    max-width: 800px;
+    max-width:83%;
     padding: 10px 20px;
     border: 3px solid var(--tan);
 }
@@ -129,6 +129,10 @@ input[type="password"]:focus {
     background: white;
 }
 
+input[type="text"],
+input[type="password"] {
+    margin-bottom: 5px;
+}
 #aboutSection {
     padding: 1em;
     margin-top: 5%;

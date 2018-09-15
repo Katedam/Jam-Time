@@ -74,7 +74,7 @@ showSection = function(event) {
             spread.className = 'hidden';
             signIn.className = 'hidden';
             header.className = 'hidden';
-            forms.className = 'hidden';
+            register.className = 'hidden';
         } 
     } else if (clickedId == "contact") {
         if (contact.className == 'hidden') {
@@ -95,12 +95,16 @@ showSection = function(event) {
             register.className = 'hidden';
         }
     } else if (clickedId == "sign-in") {
-        if (signIn.className == 'hidden') {
+        if (register.className == 'hidden') {
+            signIn.className = 'unhidden';
+            header.className = 'hidden';    
+        } else if (signIn.className == 'hidden') {
             signIn.className = 'unhidden';
             contact.className = 'hidden';
             about.className = 'hidden';
             spread.className = 'hidden';
             header.className = 'hidden';
+            register.className = 'hidden';
         }
     }
 }

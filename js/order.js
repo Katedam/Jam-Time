@@ -118,4 +118,3 @@ function sendOrder() {
     }
     document.getElementById("order").value = "You ordered a sammy with: " + txt;
 }
-

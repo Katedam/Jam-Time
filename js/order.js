@@ -14,30 +14,10 @@ for (var index = 0; index < accounts.length; index++) {
         document.getElementById('add-user-name').innerText = "Hi, " + currentUser.username + ", welcome back! Would you like to reorder one of your faves?";
         var faves = document.getElementById('fave-sandwiches');
         for (var sandwichIndex = 0; sandwichIndex < currentUser.favoriteSandwiches.length; sandwichIndex++) {
-            // var icon = document.createElement('img');
-            // icon.setAttribute('src', '../assets/bread.png');
-            // faves.appendChild(icon);
             var sandwichlist = document.createElement('p');
             var ingredient = currentUser.favoriteSandwiches[sandwichIndex];
             sandwichlist.innerText = ingredient.spreads + ", " + ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread; 
             faves.appendChild(sandwichlist);
-            // var list = document.createElement('ul');
-            // var sandwich = document.createElement('li');
-            // sandwich.innerText = currentUser.favoriteSandwiches[sandwichIndex].spreads + ",";
-            // list.appendChild(sandwich);
-            // sandwich = document.createElement('li');
-            // sandwich.innerText = currentUser.favoriteSandwiches[sandwichIndex].jams + ",";
-            // list.appendChild(sandwich);
-            // sandwich = document.createElement('li');
-            // sandwich.innerText = "& " + currentUser.favoriteSandwiches[sandwichIndex].toppings;
-            // list.appendChild(sandwich);
-            // sandwich = document.createElement('li');
-            // sandwich.innerText = "on " + currentUser.favoriteSandwiches[sandwichIndex].bread;
-            // list.appendChild(sandwich);
-            // // sandwich = document.createElement('li');
-            // // sandwich.innerText = currentUser.favoriteSandwiches[sandwichIndex].cut;
-            // // list.appendChild(sandwich);
-            // faves.appendChild(list);
             }
         }
     }
@@ -90,6 +70,10 @@ makeSandwich = function() {
         } 
     }
     var user = localStorage.getItem('current login');
+    if (user == "guest") {
+        console.log(user);
+       accounts[0].addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice); 
+    }
     for(var index = 0; index < accounts.length; index++) {
         if (index == user) {
             var currentUser = accounts[index];
@@ -97,14 +81,8 @@ makeSandwich = function() {
         }
     }
     localStorage.setItem('accounts', JSON.stringify(accounts));
-
-    var guestUser = localStorage.getItem('guest-login');
-    guestUser.addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
-
-    window.location.href = '../html/summary.html';
+    // window.location.href = '../html/summary.html';
 }
-
-
 makeSammyButton.addEventListener("click", makeSandwich);
 
 function sendOrder() {

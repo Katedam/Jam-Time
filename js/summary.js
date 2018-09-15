@@ -2,28 +2,52 @@ console.log('summary.js is pluggeg in');
 
 function checkLocal() {
     var userIndex = JSON.parse(localStorage.getItem('current login'));
-    var user = JSON.parse(localStorage.getItem('accounts'))[userIndex];
-    var guestLogin = JSON.parse(localStorage.getItem('guest-login'));
-    var sandwichIndex = user.favoriteSandwiches.length - 1;
-    var madeSandwich = user.favoriteSandwiches[sandwichIndex];
-
-    var showSummary = document.getElementById("sandwich-list");
-    var spitSummary = document.createElement("li");
-    spitSummary.innerText = madeSandwich.bread;
-    showSummary.appendChild(spitSummary); 
-    spitSummary = document.createElement("li");
-    spitSummary.innerText = madeSandwich.spreads;
-    showSummary.appendChild(spitSummary);
-    spitSummary = document.createElement('li');
-    spitSummary.innerText = madeSandwich.jams;
-    showSummary.appendChild(spitSummary);
-    spitSummary = document.createElement("li");
-    spitSummary.innerText = madeSandwich.toppings;
-    showSummary.appendChild(spitSummary);
-    spitSummary = document.createElement("li");
-    spitSummary.innerText = madeSandwich.isGrilled;
-    showSummary.appendChild(spitSummary);
-      
+    if (userIndex == "guest") {
+        var guest = accounts[0]
+        var sandwichIndex = guest.favoriteSandwiches.length - 1;
+        var showSummary = document.getElementById("sandwich-list");
+        var spitSummary = document.createElement("li");
+        spitSummary.innerText = guest.favoriteSandwiches[sandwichIndex].bread;
+        showSummary.appendChild(spitSummary); 
+        spitSummary = document.createElement("li");
+        spitSummary.innerText = guest.favoriteSandwiches[sandwichIndex].spreads;
+        showSummary.appendChild(spitSummary);
+        spitSummary = document.createElement('li');
+        spitSummary.innerText = guest.favoriteSandwiches[sandwichIndex].jams;
+        showSummary.appendChild(spitSummary);
+        spitSummary = document.createElement("li");
+        spitSummary.innerText = guest.favoriteSandwiches[sandwichIndex].toppings;
+        showSummary.appendChild(spitSummary);
+        spitSummary = document.createElement("li");
+        spitSummary.innerText = guest.favoriteSandwiches[sandwichIndex].isGrilled;
+        showSummary.appendChild(spitSummary);
+    } else {
+        var user = JSON.parse(localStorage.getItem('current login'));
+        for (var i = 0; i < accounts.length; i++) {
+            if (user == i) {
+            user = accounts[i];
+            // var madeSandwich = favoriteSandwiches[i];
+            var sandwichIndex = user.favoriteSandwiches.length - 1;
+            var showSummary = document.getElementById("sandwich-list");
+            var spitSummary = document.createElement("li");
+            spitSummary.innerText = user.bread;
+            showSummary.appendChild(spitSummary); 
+            spitSummary = document.createElement("li");
+            spitSummary.innerText = user.madeSandwich.spreads;
+            showSummary.appendChild(spitSummary);
+            spitSummary = document.createElement('li');
+            spitSummary.innerText = user.madeSandwich.jams;
+            showSummary.appendChild(spitSummary);
+            spitSummary = document.createElement("li");
+            spitSummary.innerText = user.madeSandwich.toppings;
+            showSummary.appendChild(spitSummary);
+            spitSummary = document.createElement("li");
+            spitSummary.innerText = user.madeSandwich.isGrilled;
+            showSummary.appendChild(spitSummary);   
+            }
+        }
+        
+    }
 }
 checkLocal();
 

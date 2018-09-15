@@ -15,7 +15,6 @@ console.log(address);
 window.addEventListener('load', showAddress);
 
 
-
 // function changePic(interval, frames) {
 //     var int = 2;
     

@@ -70,27 +70,19 @@ makeSandwich = function() {
         } 
     }
     var user = localStorage.getItem('current login');
+    if (user == "guest") {
+        console.log(user);
+       accounts[0].addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice); 
+    }
     for(var index = 0; index < accounts.length; index++) {
         if (index == user) {
             var currentUser = accounts[index];
             currentUser.addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
-        } else if (user == "guest") {
-            accounts[0].addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
-
         }
     }
     localStorage.setItem('accounts', JSON.stringify(accounts));
-
-    // var guestUser = localStorage.getItem('current login');
-    // if('guest' == 'guestUser') {
-    //     console.log(guestUser);
-
-    // }
-
-    window.location.href = '../html/summary.html';
+    // window.location.href = '../html/summary.html';
 }
-
-
 makeSammyButton.addEventListener("click", makeSandwich);
 
 function sendOrder() {

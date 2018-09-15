@@ -32,34 +32,32 @@ addUserAccount = function() {
 }
 getRegistrationButton.addEventListener("click", addUserAccount);
 
-var getGuestLogin = document.getElementById('guestLogin');
+
 var getLoginButton = document.getElementById('loginButton');
 loadOrderPage = function(){ 
-    var clickedId = event.target.id;
-    console.log(clickedId);
-    if (clickedId == 'getLoginButton') {
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-        for (var index = 0; index < accounts.length; index++) {
-        if (username == accounts[index].username && password == accounts[index].password) {
-            console.log('got a match');
-            var currentUserIndex = index;
-            localStorage.setItem("current login", JSON.stringify(currentUserIndex));
-            window.location.href = '../html/orderpage.html';
-        } else {
-            document.getElementById('not-a-match').innerText = "Username or password does not match";
-            } 
-        } 
-    } if (clickedId == "guestLogin") {
-        var guestUser = guestUser;
-        localStorage.setItem('guest-login', JSON.stringify(guestUser));
-        console.log(guestUser);
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    for (var index = 0; index < accounts.length; index++) {
+    if (username == accounts[index].username && password == accounts[index].password) {
+        var currentUserIndex = index;
+        localStorage.setItem("current login", JSON.stringify(currentUserIndex));
         window.location.href = '../html/orderpage.html';
-    }
-    
-}
+        break;
+    } else {
+        document.getElementById('not-a-match').innerText = "Username or password does not match";
+        } 
+    } 
+    window.location.href = '../html/orderpage.html';
+} 
 getLoginButton.addEventListener("click", loadOrderPage);
-getGuestLogin.addEventListener("click", loadOrderPage);
+
+var getGuestLogin = document.getElementById('guestLogin');
+var loadGuestOrderPage = function() {
+    var currentUserIndex = "guest";
+    localStorage.setItem("current login", JSON.stringify(currentUserIndex));
+    window.location.href = '../html/orderpage.html';
+}
+getGuestLogin.addEventListener("click", loadGuestOrderPage);
 
 showSection = function(event) {
     var clickedId = event.target.id;

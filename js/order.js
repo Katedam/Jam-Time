@@ -11,24 +11,25 @@ var user = localStorage.getItem('current login');
 for (var index = 0; index < accounts.length; index++) {
      if (index == user) {
         var currentUser = accounts[index];
-        document.getElementById('add-user-name').innerText = "Hiya, " + currentUser.username + ", welcome back! Would you like to reorder one of your faves?";
+        document.getElementById('add-user-name').innerText = "Hi, " + currentUser.username + ", welcome back! Would you like to reorder one of your faves?";
         var faves = document.getElementById('fave-sandwiches');
-        for (var jam = 0; jam < currentUser.favoriteSandwiches.length; jam++) {
+        for (var sandwichIndex = 0; sandwichIndex < currentUser.favoriteSandwiches.length; sandwichIndex++) {
             var list = document.createElement('ul');
             var sandwich = document.createElement('li');
-            sandwich.innerText = currentUser.favoriteSandwiches[jam].spreads
+            sandwich.innerText = currentUser.favoriteSandwiches[sandwichIndex].spreads
             list.appendChild(sandwich);
             sandwich = document.createElement('li');
-            sandwich.innerText = currentUser.favoriteSandwiches[jam].jams;
+            sandwich.innerText = currentUser.favoriteSandwiches[sandwichIndex].jams;
             list.appendChild(sandwich);
             sandwich = document.createElement('li');
-            sandwich.innerText = currentUser.favoriteSandwiches[jam].toppings;
+            sandwich.innerText = currentUser.favoriteSandwiches[sandwichIndex].toppings;
             list.appendChild(sandwich);
             sandwich = document.createElement('li');
-            sandwich.innerText = "on " + currentUser.favoriteSandwiches[jam].bread;
+            sandwich.innerText = currentUser.favoriteSandwiches[sandwichIndex].bread;
             list.appendChild(sandwich);
             sandwich = document.createElement('li');
-            sandwich.innerText = "cut " + currentUser.favoriteSandwiches[jam].cut;
+            sandwich.innerText = currentUser.favoriteSandwiches[sandwichIndex].cut;
+            console.log(currentUser.favoriteSandwiches[sandwichIndex].cut);
             list.appendChild(sandwich);
             faves.appendChild(list);
             }

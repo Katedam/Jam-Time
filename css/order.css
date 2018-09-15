@@ -13,6 +13,8 @@ h1 {
   margin: 0;
 }
 #fave-sandwiches {
+  display: flex;
+  flex-wrap: wrap;
   background-color: rgba(60, 18, 8, 0.7);
   border: 5px solid var(--green);
   width: 50%;
@@ -22,6 +24,7 @@ h1 {
   margin-bottom: 20px;
 }
 h3 {
+  width: 100%;
   font-family: 'Arimo', sans-serif;
   font-size: 18px;
   color: #CFB7A2;
@@ -38,7 +41,7 @@ h3 {
 #fave-sandwiches li {
   list-style: none;
   font-family: 'Arimo', sans-serif;
-  color: white;
+  color: var(--cream);
 }
 fieldset h3 {
   margin: 0;

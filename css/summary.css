@@ -10,6 +10,20 @@ fieldset {
     height: 207px;
     box-sizing: border-box;
 }
+img {
+    float: left;
+}
+ul {
+    list-style: none;
+    font-family: 'Arimo', sans-serif;
+    color: var(--cream);
+    margin-left: 49px;
+    margin-top: 0;
+}
+li {
+    padding-bottom: 5px;
+    font-size: 20px;
+}
 #header {
     display: flex;
     align-items: center;
@@ -20,6 +34,7 @@ fieldset {
     width: 50%;
     height: 90px;
     font-size: 80px;
+    padding-top: 1em;
 }
 
 #instructions {

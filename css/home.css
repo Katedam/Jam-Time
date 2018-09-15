@@ -2,6 +2,7 @@ body {
     background-image: url("../assets/PBJ.jpg");
     background-repeat: repeat-y;
     background-size: cover;
+    background-attachment: fixed;
     overflow-x: hidden;
     margin: 0;
     position: relative;

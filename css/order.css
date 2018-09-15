@@ -1,7 +1,14 @@
 body {
   background-image: url(../assets/peanut-butter-jelly-mistakes-646.jpg);
+  background-attachment: fixed;
   overflow-x: hidden;
   margin: 0;
+}
+p {
+  font-family: 'Arimo', sans-serif;
+  color: var(--cream);
+  margin-top: 0;
+  margin-left: 2em;
 }
 h1 {
   font-size: 100px;
@@ -94,6 +101,9 @@ form.options {
 /* #button img:hover{
   width: 275px;
 } */
+#button {
+  box-shadow: none;
+}
 input[type="button"] {
   position: absolute;
   top: 50px;

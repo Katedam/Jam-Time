@@ -49,6 +49,9 @@ loadOrderPage = function(){
             } 
         } 
     } if (getGuestLogin) {
+        var guestUser = guestUser;
+        localStorage.setItem('guest-login', JSON.stringify(guestUser));
+        console.log(guestUser);
         window.location.href = '../html/orderpage.html';
     }
     

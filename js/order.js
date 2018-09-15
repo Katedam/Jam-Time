@@ -96,12 +96,13 @@ makeSandwich = function() {
             currentUser.addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
         }
     }
-
     localStorage.setItem('accounts', JSON.stringify(accounts));
+
+    var guestUser = localStorage.getItem('guest-login');
+    guestUser.addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
 
     window.location.href = '../html/summary.html';
 }
-
 
 
 makeSammyButton.addEventListener("click", makeSandwich);

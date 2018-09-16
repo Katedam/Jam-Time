@@ -81,7 +81,6 @@ loadIngredients = function() {
         label.setAttribute('for', id);
         label.innerText = breads[i];
         breadOptions.appendChild(label);
-        console.log(label);
         var input = document.createElement('input');
         input.setAttribute('id', id);
         input.setAttribute('class', 'breads');
@@ -89,7 +88,6 @@ loadIngredients = function() {
         input.setAttribute('name', 'breads');
         input.setAttribute('value', breads[i]);
         breadOptions.appendChild(input);
-        console.log(input);
     }
     var spreadOptions = document.getElementById('spreadIngredients');
     for (var i = 0; i < spreads.length; i++) {
@@ -99,15 +97,13 @@ loadIngredients = function() {
         label.setAttribute('for', id);
         label.innerText = spreads[i];
         spreadOptions.appendChild(label);
-        console.log(label);
         var input = document.createElement('input');
         input.setAttribute('id', id);
         input.setAttribute('class', 'spreads');
-        input.setAttribute('type', 'radio');
+        input.setAttribute('type', 'checkbox');
         input.setAttribute('name', 'spreads');
         input.setAttribute('value', spreads[i]);
         spreadOptions.appendChild(input);
-        console.log(input);
     }
     var jamOptions = document.getElementById('jamIngredients');
     for (var i = 0; i < jams.length; i++) {
@@ -117,15 +113,13 @@ loadIngredients = function() {
         label.setAttribute('for', id);
         label.innerText = jams[i];
         jamOptions.appendChild(label);
-        console.log(label);
         var input = document.createElement('input');
         input.setAttribute('id', id);
         input.setAttribute('class', 'jams');
-        input.setAttribute('type', 'radio');
+        input.setAttribute('type', 'checkbox');
         input.setAttribute('name', 'jams');
         input.setAttribute('value', jams[i]);
         jamOptions.appendChild(input);
-        console.log(input);
     }
     var addOptions = document.getElementById('add-options');
     for (var i = 0; i < toppings.length; i++) {
@@ -135,15 +129,13 @@ loadIngredients = function() {
         label.setAttribute('for', id);
         label.innerText = toppings[i];
         addOptions.appendChild(label);
-        console.log(label);
         var input = document.createElement('input');
         input.setAttribute('id', id);
         input.setAttribute('class', 'extras');
-        input.setAttribute('type', 'radio');
+        input.setAttribute('type', 'checkbox');
         input.setAttribute('name', 'toppings');
         input.setAttribute('value', toppings[i]);
         addOptions.appendChild(input);
-        console.log(input);
     }
     var cutOptions = document.getElementById('add-cuts');
     for (var i = 0; i < cuts.length; i++) {
@@ -153,7 +145,6 @@ loadIngredients = function() {
         label.setAttribute('for', id);
         label.innerText = cuts[i];
         cutOptions.appendChild(label);
-        console.log(label);
         var input = document.createElement('input');
         input.setAttribute('id', id);
         input.setAttribute('class', 'cuts');
@@ -161,11 +152,10 @@ loadIngredients = function() {
         input.setAttribute('name', 'cuts');
         input.setAttribute('value', cuts[i]);
         cutOptions.appendChild(input);
-        console.log(input);
     }
     var isGrilled = document.getElementById('add-grilled');
     var label = document.createElement('label');
-    label.setAttribute('for', id);
+    label.setAttribute('for', 'grilled-choice');
     label.innerText = "Grill it!"
     isGrilled.appendChild(label);
     var input = document.createElement('input');
@@ -220,7 +210,7 @@ makeSandwich = function() {
             }
         } 
     }
-    var checkedGrilled = document.getElementById('grilled');
+    var checkedGrilled = document.getElementById('add-grilled');
         if (checkedGrilled.checked == true) {
             var grilledChoice = " - Grilled";
         } else {

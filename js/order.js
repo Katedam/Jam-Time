@@ -6,34 +6,70 @@ function welcomeUser() {
   document.getElementById("welcome").innerHTML = text;
 }
 
-function loadUserName() {
+loadUserName = function() {
 var user = localStorage.getItem('current login');
     for (var index = 0; index < accounts.length; index++) {
         if (index == user) {
-            var currentUser = accounts[index];
-            document.getElementById('add-user-name').innerText = "Hi, " + currentUser.username + ", welcome back! Would you like to reorder one of your faves?";
-            var faves = document.getElementById('fave-sandwiches');
-            for (var sandwichIndex = 0; sandwichIndex < currentUser.favoriteSandwiches.length; sandwichIndex++) {
-                var sandwichlist = document.createElement('p');
-                var ingredient = currentUser.favoriteSandwiches[sandwichIndex];
-                if (ingredient.toppings == undefined) {
-                    sandwichlist.innerText = ingredient.spreads + " & " + ingredient.jams + " on " + ingredient.bread + " " + ingredient.isGrilled; 
-                    faves.appendChild(sandwichlist);
-                } else if (ingredient.spreads == undefined) {
-                    sandwichlist.innerText = ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
-                    faves.appendChild(sandwichlist);
-                } else if (ingredient.jams == undefined) {
-                    sandwichlist.innerText = ingredient.spreads + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
-                    faves.appendChild(sandwichlist);
-                } else {
-                    sandwichlist.innerText = ingredient.spreads + ", " + ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
-                    faves.appendChild(sandwichlist);
+            if (accounts[index].favoriteSandwiches.length > 0) {
+                var currentUser = accounts[index];
+                document.getElementById('add-user-name').innerText = "Hi, " + currentUser.username + ", welcome back! Would you like to order one of your saved faves?";
+                var faves = document.getElementById('fave-sandwiches');
+                for (var sandwichIndex = 0; sandwichIndex < currentUser.favoriteSandwiches.length; sandwichIndex++) {
+                    var sandwichlist = document.createElement('p');
+                    var ingredient = currentUser.favoriteSandwiches[sandwichIndex];
+                    if (ingredient.toppings == undefined) {
+                        sandwichlist.innerText = ">" + ingredient.spreads + " & " + ingredient.jams + " on " + ingredient.bread + " " + ingredient.isGrilled; 
+                        faves.appendChild(sandwichlist);
+                    } else if (ingredient.spreads == undefined) {
+                        sandwichlist.innerText = ">" + ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
+                        faves.appendChild(sandwichlist);
+                    } else if (ingredient.jams == undefined) {
+                        sandwichlist.innerText = ">" + ingredient.spreads + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
+                        faves.appendChild(sandwichlist);
+                    } else {
+                        sandwichlist.innerText = ">" + ingredient.spreads + ", " + ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
+                        faves.appendChild(sandwichlist);
+                    }
                 }
             }
+            
         }
     }
 }
 window.onload = loadUserName();
+
+loadSandwichCombos = function() {
+    var combosContainer = document.getElementById('sandwich-combos');
+    var header = document.createElement('h3');
+    header.innerText = "Need some inspo? Here are our staff picks!";
+    combosContainer.appendChild(header);
+    for (var i = 0; i < comboNames.length; i++) {
+        var list = document.createElement('ul');
+        var listHeader = document.createElement('lh');
+        listHeader.innerText = '"' + comboNames[i] + '"';
+        list.appendChild(listHeader);
+        var item = document.createElement('li');
+        if (combos[i].spreads !== "") {
+            item.innerText = combos[i].spreads + ",";
+            list.appendChild(item);
+        }
+        if (combos[i].jams !== "") {
+            item = document.createElement('li');
+            item.innerText = combos[i].jams + ",";
+            list.appendChild(item);
+        }
+        if (combos[i].toppings !== "") {
+            item = document.createElement('li');
+            item.innerText = combos[i].toppings + ",";
+            list.appendChild(item); 
+        }
+        item = document.createElement('li');
+        item.innerText = "on " + combos[i].bread;
+        list.appendChild(item);
+        combosContainer.appendChild(list);
+    }
+}
+window.onload = loadSandwichCombos();
 
 loadIngredients = function() {
     var breadOptions = document.getElementById('breadIngredients');

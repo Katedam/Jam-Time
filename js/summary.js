@@ -1,5 +1,3 @@
-console.log('summary.js is pluggeg in'); 
-
 function checkLocal() {
     var userIndex = JSON.parse(localStorage.getItem('current login'));
     if (userIndex == "guest") {
@@ -25,31 +23,40 @@ function checkLocal() {
         var user = JSON.parse(localStorage.getItem('current login'));
         for (var i = 0; i < accounts.length; i++) {
             if (user == i) {
-            user = accounts[i];
-            var sandwichIndex = user.favoriteSandwiches.length - 1;
-            var showSummary = document.getElementById("sandwich-list");
-            var spitSummary = document.createElement("li");
-            spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].bread;
-            showSummary.appendChild(spitSummary); 
-            spitSummary = document.createElement("li");
-            spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].spreads;
-            showSummary.appendChild(spitSummary);
-            spitSummary = document.createElement('li');
-            spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].jams;
-            showSummary.appendChild(spitSummary);
-            spitSummary = document.createElement("li");
-            spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].toppings;
-            showSummary.appendChild(spitSummary);
-            spitSummary = document.createElement("li");
-            spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].isGrilled;
-            showSummary.appendChild(spitSummary);   
+                user = accounts[i];
+                var sandwichIndex = user.favoriteSandwiches.length - 1;
+                var showSummary = document.getElementById("sandwich-list");
+                var spitSummary = document.createElement("li");
+                if (user.favoriteSandwiches[sandwichIndex].bread !== undefined) {
+                    spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].bread;
+                    showSummary.appendChild(spitSummary); 
+                }
+                if (user.favoriteSandwiches[sandwichIndex].spreads !== undefined) {
+                    spitSummary = document.createElement("li");
+                    spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].spreads;
+                    showSummary.appendChild(spitSummary);
+                }
+                if (user.favoriteSandwiches[sandwichIndex].jams !== undefined) {
+                    spitSummary = document.createElement('li');
+                    spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].jams;
+                    showSummary.appendChild(spitSummary);
+                }
+                if (user.favoriteSandwiches[sandwichIndex].toppings !== undefined) {
+                    spitSummary = document.createElement("li");
+                    spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].toppings;
+                    showSummary.appendChild(spitSummary); 
+                }
+                if(user.favoriteSandwiches[sandwichIndex].isGrilled !== undefined) {
+                spitSummary = document.createElement("li");
+                    spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].isGrilled;
+                    showSummary.appendChild(spitSummary);   
+                }
             }
         }
         
     }
 }
 checkLocal();
-
 
 function localAddress() {
     var userAddress = document.getElementById("address-field").value;
@@ -61,18 +68,4 @@ function localAddress() {
     }
 }
 document.getElementById('order-button').addEventListener('click', localAddress);
-
-
-// function changePic(interval, frames) {
-//     var int = 1;
-//     function func() {
-//         document.body.id = "b" + int;
-//         int++;
-//         if(int === frames) { int = 1; }
-//     }
-//     var swap = window.setInterval(func, interval);
-// }
-
-
-// changePic(5000, 4);
 

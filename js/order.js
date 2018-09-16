@@ -37,33 +37,41 @@ window.onload = loadUserName();
 
 var makeSammyButton = document.getElementById('makeSammy');
 makeSandwich = function() {
+    var breadPicked = 0;
     var checkedBread = document.getElementsByClassName('breads');
     for (var breadIndex = 0; breadIndex < checkedBread.length; breadIndex++) {
         if (checkedBread[breadIndex].checked == true) {
+            breadPicked++;
             if (checkedBread[breadIndex].value !== undefined) {
                var breadChoice = checkedBread[breadIndex].value; 
             }
         } 
     }
+    var spreadsPicked = 0;
     var checkedSpreads = document.getElementsByClassName('spreads');
     for (var spreadIndex = 0; spreadIndex < checkedSpreads.length; spreadIndex++) {
         if (checkedSpreads[spreadIndex].checked == true) {
+            spreadsPicked++;
             if (checkedSpreads[spreadIndex].value !== undefined) {
               var spreadChoice = checkedSpreads[spreadIndex].value;  
             }
         } 
     }
+    var jamsPicked = 0;
     var checkedJams = document.getElementsByClassName('jams');
     for (var jamsIndex = 0; jamsIndex < checkedJams.length; jamsIndex++) {
         if (checkedJams[jamsIndex].checked == true) {
+            jamsPicked++;
             if (checkedJams[jamsIndex].value !== undefined) {
                var jamsChoice = checkedJams[jamsIndex].value; 
             }
         } 
     }
+    var extrasPicked = 0;
     var checkedExtras = document.getElementsByClassName('extras');
     for (var extrasIndex = 0; extrasIndex < checkedExtras.length; extrasIndex++) {
         if (checkedExtras[extrasIndex].checked == true) {
+            extrasPicked++;
             if (checkedExtras[extrasIndex].value !== undefined) {
                var extrasChoice = checkedExtras[extrasIndex].value; 
             }
@@ -83,18 +91,29 @@ makeSandwich = function() {
             }
         } 
     }
-    var user = JSON.parse(localStorage.getItem('current login'));
-    if (user == "guest") {
-       accounts[0].addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice); 
-    }
-    for(var index = 0; index < accounts.length; index++) {
-        if (index == user) {
-            var currentUser = accounts[index];
-            currentUser.addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
+    if ((spreadsPicked == 0 && jamsPicked == 0) || (spreadsPicked == 0 && extrasPicked == 0) || (jamsPicked == 0 && extrasPicked == 0)) {
+        var verify = document.getElementById('verification')
+        verify.style = "background-color: var(--green)";
+        verify.innerText = "* please pick at least two fillings";
+    } else if (breadPicked == 0) {
+        verify = document.getElementById('verification')
+        verify.style = "background-color: var(--green)";
+        verify.innerText = "";
+        verify.innerText = "* You gotta pick a bread!";
+    } else {
+        var user = JSON.parse(localStorage.getItem('current login'));
+        if (user == "guest") {
+        accounts[0].addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice); 
         }
-    }
-    localStorage.setItem('accounts', JSON.stringify(accounts));
-    window.location.href = '../html/summary.html';
+        for(var index = 0; index < accounts.length; index++) {
+            if (index == user) {
+                var currentUser = accounts[index];
+                currentUser.addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice);
+            }
+        }
+        localStorage.setItem('accounts', JSON.stringify(accounts));
+        window.location.href = '../html/summary.html';
+    }  
 }
 makeSammyButton.addEventListener("click", makeSandwich);
 

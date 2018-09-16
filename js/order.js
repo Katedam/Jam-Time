@@ -22,12 +22,9 @@ for (var index = 0; index < accounts.length; index++) {
         }
     }
 }
-
-
 window.onload = loadUserName();
+
 var makeSammyButton = document.getElementById('makeSammy');
-
-
 makeSandwich = function() {
     var checkedBread = document.getElementsByClassName('breads');
     for (var breadIndex = 0; breadIndex < checkedBread.length; breadIndex++) {
@@ -81,9 +78,24 @@ makeSandwich = function() {
         }
     }
     localStorage.setItem('accounts', JSON.stringify(accounts));
-    // window.location.href = '../html/summary.html';
+    window.location.href = '../html/summary.html';
 }
 makeSammyButton.addEventListener("click", makeSandwich);
+
+var text = document.getElementById('makeSammy');
+var image = document.getElementById('button-image');
+buttonAnimation = function() {
+    document.getElementById('button-image').style = "width: 275px";
+    document.getElementById('makeSammy').style = "font-size: 30px;"
+}
+image.addEventListener('mouseenter', buttonAnimation);
+text.addEventListener('mouseenter', buttonAnimation);
+
+buttonNormal = function() {
+    document.getElementById('button-image').style = "width: 250px";
+    document.getElementById('makeSammy').style = "font-size: 20px;"
+}
+image.addEventListener('mouseleave', buttonNormal);
 
 function sendOrder() {
     var newSandwich = document.forms[0];

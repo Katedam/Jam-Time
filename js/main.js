@@ -38,7 +38,7 @@ if (localStorage.getItem('accounts') !== null) {
     accounts.push(new UserAccount("guest", "guestpassword", "guestlast", "guestfirst", "guestphone", "guestaddress"));
     accounts.push(new UserAccount("katedam", "stickywithit", "Dameron", "Kate", "503-222-1234", "34 N Hazelnut Ave"));
     accounts.push(new UserAccount("ebittyschwinnie", "itsjamtime", "Clarkson", "Elizabeth", "503-322-5678", "77 NE Awesomesauce Ave"));
-    accounts.push(new UserAccount("zachary13", "hungryforPBandJ", "Tahsuda", "Zachary", "503-444-4321", "567 SE Marmalade St"));
+    accounts.push(new UserAccount("zachary13", "z", "Tahsuda", "Zachary", "503-444-4321", "567 SE Marmalade St"));
     //fake favorite sandwiches
     var fakeUser = accounts[1];
     fakeUser.addFaveSandwich("Classic White", "Creamy PB", "Grape Jelly", "Bananas", "", "Diagonal");

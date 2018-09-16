@@ -101,7 +101,7 @@ makeSandwich = function() {
         verify.innerText = "";
         verify.innerText = "* You gotta pick a bread!";
     } else {
-        var user = localStorage.getItem('current login');
+        var user = JSON.parse(localStorage.getItem('current login'));
         if (user == "guest") {
         accounts[0].addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice); 
         }

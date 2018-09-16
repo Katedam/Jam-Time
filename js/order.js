@@ -7,10 +7,10 @@ function welcomeUser() {
 }
 
 loadSandwichCombos = function() {
-    var combos = document.getElementById('sandwich-combos');
+    var combosContainer = document.getElementById('sandwich-combos');
     var header = document.createElement('h3');
     header.innerText = "Need some inspo? Here are our staff picks!";
-    combos.appendChild(header);
+    combosContainer.appendChild(header);
     for (var i = 0; i < comboNames.length; i++) {
         var list = document.createElement('ul');
         var listHeader = document.createElement('lh');
@@ -28,10 +28,10 @@ loadSandwichCombos = function() {
         item = document.createElement('li');
         item.innerText = "on " + combos[i].bread;
         list.appendChild(item);
-        combos.appendChild(list);
-        console.log(combos);
+        combosContainer.appendChild(list);
     }
 }
+window.onload = loadSandwichCombos();
 
 loadUserName = function() {
 var user = localStorage.getItem('current login');

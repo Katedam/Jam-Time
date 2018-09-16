@@ -69,9 +69,8 @@ makeSandwich = function() {
             console.log(cutChoice);
         } 
     }
-    var user = localStorage.getItem('current login');
+    var user = JSON.parse(localStorage.getItem('current login'));
     if (user == "guest") {
-        console.log(user);
        accounts[0].addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice); 
     }
     for(var index = 0; index < accounts.length; index++) {
@@ -81,7 +80,7 @@ makeSandwich = function() {
         }
     }
     localStorage.setItem('accounts', JSON.stringify(accounts));
-    // window.location.href = '../html/summary.html';
+    window.location.href = '../html/summary.html';
 }
 makeSammyButton.addEventListener("click", makeSandwich);
 

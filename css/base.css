@@ -77,7 +77,7 @@ input[type="text"] {
 input[type="text"]:focus {
     background: white;
 }
-input[type="button"] {
+input[type="button"], input[type="submit"] {
     position: relative;
     display: block;
     padding: 9px 39px 10px 39px;
@@ -92,7 +92,7 @@ input[type="button"] {
     border-width: 1px 1px 3px;
     margin-bottom: 10px;
 }
-input[type="button"]:hover {
+input[type="button"]:hover, input[type="submit"]:hover {
     background: var(--brown);
     color: var(--cream);
     font-weight: bold;

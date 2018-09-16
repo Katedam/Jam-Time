@@ -33,12 +33,15 @@ addUserAccount = function() {
 getRegistrationButton.addEventListener("click", addUserAccount);
 
 
-var getLoginButton = document.getElementById('loginButton');
-loadOrderPage = function(){ 
+
+var getLoginButton = document.getElementById("loginButton");
+
+loadOrderPage = function(event){ 
+    event.preventDefault();
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
     for (var index = 0; index < accounts.length; index++) {
-    if (username == accounts[index].username && password == accounts[index].password) {
+        if (username == accounts[index].username && password == accounts[index].password) {
         var currentUserIndex = index;
         localStorage.setItem("current login", JSON.stringify(currentUserIndex));
         window.location.href = '../html/orderpage.html';
@@ -49,6 +52,7 @@ loadOrderPage = function(){
     } 
 } 
 getLoginButton.addEventListener("click", loadOrderPage);
+document.getElementById("login-form").addEventListener('submit', loadOrderPage);
 
 var getGuestLogin = document.getElementById('guestLogin');
 var loadGuestOrderPage = function() {

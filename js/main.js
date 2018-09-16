@@ -8,12 +8,12 @@ function UserAccount(username, password, first, last, phone, address) {
     this.favoriteSandwiches = [];
 };
 
-function Sandwich(bread, spreads, jams, toppings, cut) {
+function Sandwich(bread, spreads, jams, toppings, grilled, cut) {
     this.bread = bread;
     this.spreads = spreads;
     this.jams = jams;
     this.toppings = toppings
-    this.isGrilled = false;
+    this.isGrilled = grilled;
     this.cut = cut;
 }
 var accounts = [];
@@ -30,7 +30,7 @@ if (localStorage.getItem('accounts') !== null) {
         var eachAccount = new UserAccount(rawData.username, rawData.password, rawData.first, rawData.last, rawData.phone, rawData.address);
         for (var sandwichIndex = 0; sandwichIndex < rawData.favoriteSandwiches.length; sandwichIndex++) {
             var rawSandwich = rawData.favoriteSandwiches[sandwichIndex];
-            eachAccount.addFaveSandwich(rawSandwich.bread, rawSandwich.spreads, rawSandwich.jams, rawSandwich.toppings, rawSandwich.cut);
+            eachAccount.addFaveSandwich(rawSandwich.bread, rawSandwich.spreads, rawSandwich.jams, rawSandwich.toppings, rawSandwich.isGrilled, rawSandwich.cut);
         }
         accounts.push(eachAccount);
     }
@@ -41,9 +41,9 @@ if (localStorage.getItem('accounts') !== null) {
     accounts.push(new UserAccount("zachary13", "hungryforPBandJ", "Tahsuda", "Zachary", "503-444-4321", "567 SE Marmalade St"));
     //fake favorite sandwiches
     var fakeUser = accounts[1];
-    fakeUser.addFaveSandwich("Classic White", "Creamy PB", "Grape Jelly", "Bananas", "Diagonal");
-    fakeUser.addFaveSandwich("Bagel", "Almond butter", "Marionberry Jam", "Coconut flakes", "Vertical");
-    accounts[0].addFaveSandwich("Bagel", "Almond butter", "Marionberry Jam", "Coconut flakes", "Vertical");
+    fakeUser.addFaveSandwich("Classic White", "Creamy PB", "Grape Jelly", "Bananas", "", "Diagonal");
+    fakeUser.addFaveSandwich("Bagel", "Almond butter", "Marionberry Jam", "Coconut flakes", "grilled", "Vertical");
+    accounts[0].addFaveSandwich("Bagel", "Almond butter", "Marionberry Jam", "Coconut flakes", "", "Vertical");
 }
 
 //use this constructor to store temp data to guestOrderSum array

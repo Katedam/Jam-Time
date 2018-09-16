@@ -26,23 +26,22 @@ function checkLocal() {
         for (var i = 0; i < accounts.length; i++) {
             if (user == i) {
             user = accounts[i];
-            // var madeSandwich = favoriteSandwiches[i];
             var sandwichIndex = user.favoriteSandwiches.length - 1;
             var showSummary = document.getElementById("sandwich-list");
             var spitSummary = document.createElement("li");
-            spitSummary.innerText = user.bread;
+            spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].bread;
             showSummary.appendChild(spitSummary); 
             spitSummary = document.createElement("li");
-            spitSummary.innerText = user.madeSandwich.spreads;
+            spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].spreads;
             showSummary.appendChild(spitSummary);
             spitSummary = document.createElement('li');
-            spitSummary.innerText = user.madeSandwich.jams;
+            spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].jams;
             showSummary.appendChild(spitSummary);
             spitSummary = document.createElement("li");
-            spitSummary.innerText = user.madeSandwich.toppings;
+            spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].toppings;
             showSummary.appendChild(spitSummary);
             spitSummary = document.createElement("li");
-            spitSummary.innerText = user.madeSandwich.isGrilled;
+            spitSummary.innerText = user.favoriteSandwiches[sandwichIndex].isGrilled;
             showSummary.appendChild(spitSummary);   
             }
         }

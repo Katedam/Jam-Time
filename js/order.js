@@ -16,7 +16,7 @@ for (var index = 0; index < accounts.length; index++) {
         for (var sandwichIndex = 0; sandwichIndex < currentUser.favoriteSandwiches.length; sandwichIndex++) {
             var sandwichlist = document.createElement('p');
             var ingredient = currentUser.favoriteSandwiches[sandwichIndex];
-            sandwichlist.innerText = ingredient.spreads + ", " + ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread; 
+            sandwichlist.innerText = ingredient.spreads + ", " + ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
             faves.appendChild(sandwichlist);
             }
         }
@@ -30,45 +30,40 @@ makeSandwich = function() {
     for (var breadIndex = 0; breadIndex < checkedBread.length; breadIndex++) {
         if (checkedBread[breadIndex].checked == true) {
             var breadChoice = checkedBread[breadIndex].value;
-            console.log(breadChoice);
         } 
     }
     var checkedSpreads = document.getElementsByClassName('spreads');
     for (var spreadIndex = 0; spreadIndex < checkedSpreads.length; spreadIndex++) {
         if (checkedSpreads[spreadIndex].checked == true) {
             var spreadChoice = checkedSpreads[spreadIndex].value;
-            console.log(spreadChoice);
         } 
     }
     var checkedJams = document.getElementsByClassName('jams');
     for (var jamsIndex = 0; jamsIndex < checkedJams.length; jamsIndex++) {
         if (checkedJams[jamsIndex].checked == true) {
             var jamsChoice = checkedJams[jamsIndex].value;
-            console.log(jamsChoice);
         } 
     }
     var checkedExtras = document.getElementsByClassName('extras');
     for (var extrasIndex = 0; extrasIndex < checkedExtras.length; extrasIndex++) {
         if (checkedExtras[extrasIndex].checked == true) {
             var extrasChoice = checkedExtras[extrasIndex].value;
-            console.log(extrasChoice);
         } 
     }
     var checkedGrilled = document.getElementById('grilled');
         if (checkedGrilled.checked == true) {
-            var grilledChoice = checkedGrilled.value;
-            console.log(grilledChoice);
-        } 
+            var grilledChoice = "Grilled";
+        } else {
+            grilledChoice = "";
+        }
     var checkedCut = document.getElementsByClassName('cuts');
     for (var cutIndex = 0; cutIndex < checkedCut.length; cutIndex++) {
         if (checkedCut[cutIndex].checked == true) {
             var cutChoice = checkedCut[cutIndex].value;
-            console.log(cutChoice);
         } 
     }
     var user = localStorage.getItem('current login');
     if (user == "guest") {
-        console.log(user);
        accounts[0].addFaveSandwich(breadChoice, spreadChoice, jamsChoice, extrasChoice, grilledChoice, cutChoice); 
     }
     for(var index = 0; index < accounts.length; index++) {

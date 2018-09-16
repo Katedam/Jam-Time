@@ -32,8 +32,6 @@ addUserAccount = function() {
 }
 getRegistrationButton.addEventListener("click", addUserAccount);
 
-
-
 var getLoginButton = document.getElementById("loginButton");
 
 loadOrderPage = function(event){ 
@@ -49,8 +47,8 @@ loadOrderPage = function(event){
     } else {
         document.getElementById('not-a-match').innerText = "Username or password does not match";
         } 
-    } 
-} 
+    }
+}
 getLoginButton.addEventListener("click", loadOrderPage);
 document.getElementById("login-form").addEventListener('submit', loadOrderPage);
 

@@ -19,6 +19,12 @@ h1 {
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   margin: 0;
 }
+div#sandwich-combos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
 #fave-sandwiches {
   display: flex;
   flex-wrap: wrap;
@@ -33,17 +39,26 @@ h1 {
 h3 {
   width: 100%;
   font-family: 'Arimo', sans-serif;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   font-size: 18px;
   color: #CFB7A2;
   padding: 10px;
   text-align: center;
 }
-#fave-sandwiches ul {
-  padding-bottom: 5px;
+lh {
+color: var(--green);
+font-family: 'Arimo', sans-serif;
+text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+font-size: 18px;
+width: 200px;
+}
+#sandwich-combos ul {
+  padding-bottom: 0;
   margin-top: 0;
-  margin-left: 2px;
-  margin-bottom: 2px;
-  width: 130px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  width: 120px;
+  margin-right: 0px;
 }
 #fave-sandwiches li {
   list-style: none;
@@ -53,7 +68,7 @@ h3 {
 fieldset h3 {
   margin: 0;
   padding: 0;
-  width: 50%;
+  width: 51%;
 }
 form {
   max-width: 20%;

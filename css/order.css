@@ -122,3 +122,12 @@ input[type="button"]:hover {
   color: #80280F;
   font-size: 30px;
 }
+h3#verification {
+  width: 100%;
+  font-family: 'Arimo', sans-serif;
+  font-size: 18px;
+  color: var(--red);
+  text-align: center;
+  border-radius: 4px;
+  padding: 2px;
+}

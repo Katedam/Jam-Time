@@ -58,7 +58,8 @@ function checkLocal() {
 }
 checkLocal();
 
-function localAddress() {
+function localAddress(event) {
+    event.preventDefault();
     var userAddress = document.getElementById("address-field").value;
     if(userAddress != "") {
         window.localStorage.setItem('address', JSON.stringify(userAddress));
@@ -67,5 +68,7 @@ function localAddress() {
         document.getElementById("please-enter").innerText = "You gotta let us know where to send it!";
     }
 }
-document.getElementById('order-button').addEventListener('click', localAddress);
+document.getElementById("order-button").addEventListener('click', localAddress);
+document.getElementById("order-button").addEventListener('submit', localAddress);
+
 

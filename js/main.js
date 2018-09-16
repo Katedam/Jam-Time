@@ -66,5 +66,10 @@ var spreads = ["Crunchy PB", "Creamy PB", "Almond Butter", "Sunflower Seed Butte
 var jams = ["Grape Jelly", "Strawberry Jam", "Apricot Preserves", "Marionberry Jam", "Orange Marmalade", "Mixed Berry"];
 var toppings = ["Bananas", "Nutella", "Chocolate Chips", "Raisins", "Honey", "Coconut Flakes", "Butterscotch Chips"];
 var cuts = ["Vertical", "Diagonal", "No Cut", "No Crust"];
-
+var combos = [];
+combos.push(new GuestOrder("Cinnamon Raisin Swirl", "Almond Butter", "", "Honey, Marshmallow Fluff & Cinnamon", "none"));
+combos.push(new GuestOrder("Classic White", "Cashew Butter", "Grape Jelly", "Raisins & Coconut Flakes", "none"));
+combos.push(new GuestOrder("Whole Grain", "Chunky PB", "Apricot Jam", "Nutella, Banana, & Honey", "none"));
+combos.push(new GuestOrder("GF White", "Hazelnut Butter", "", "Marshmallow Fluff & Choco-chips", "Grill it!"))
+var comboNames = ["Sticky Business", "The Grape Escape", "Funky Chunky", "S'more is Better"];
 localStorage.setItem('accounts', JSON.stringify(accounts));

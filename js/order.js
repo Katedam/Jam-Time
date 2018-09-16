@@ -6,30 +6,60 @@ function welcomeUser() {
   document.getElementById("welcome").innerHTML = text;
 }
 
-function loadUserName() {
+loadSandwichCombos = function() {
+    var combos = document.getElementById('sandwich-combos');
+    var header = document.createElement('h3');
+    header.innerText = "Need some inspo? Here are our staff picks!";
+    combos.appendChild(header);
+    for (var i = 0; i < comboNames.length; i++) {
+        var list = document.createElement('ul');
+        var listHeader = document.createElement('lh');
+        listHeader.innerText = comboNames[i];
+        list.appendChild(listHeader);
+        var item = document.createElement('li');
+        item.innerText = combos[i].spreads + ",";
+        list.appendChild(item);
+        item = document.createElement('li');
+        item.innerText = combos[i].jams + ",";
+        list.appendChild(item);
+        item = document.createElement('li');
+        item.innerText = combos[i].toppings + ",";
+        list.appendChild(item);
+        item = document.createElement('li');
+        item.innerText = "on " + combos[i].bread;
+        list.appendChild(item);
+        combos.appendChild(list);
+        console.log(combos);
+    }
+}
+
+loadUserName = function() {
 var user = localStorage.getItem('current login');
     for (var index = 0; index < accounts.length; index++) {
         if (index == user) {
-            var currentUser = accounts[index];
-            document.getElementById('add-user-name').innerText = "Hi, " + currentUser.username + ", welcome back! Would you like to reorder one of your faves?";
-            var faves = document.getElementById('fave-sandwiches');
-            for (var sandwichIndex = 0; sandwichIndex < currentUser.favoriteSandwiches.length; sandwichIndex++) {
-                var sandwichlist = document.createElement('p');
-                var ingredient = currentUser.favoriteSandwiches[sandwichIndex];
-                if (ingredient.toppings == undefined) {
-                    sandwichlist.innerText = ingredient.spreads + " & " + ingredient.jams + " on " + ingredient.bread + " " + ingredient.isGrilled; 
-                    faves.appendChild(sandwichlist);
-                } else if (ingredient.spreads == undefined) {
-                    sandwichlist.innerText = ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
-                    faves.appendChild(sandwichlist);
-                } else if (ingredient.jams == undefined) {
-                    sandwichlist.innerText = ingredient.spreads + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
-                    faves.appendChild(sandwichlist);
-                } else {
-                    sandwichlist.innerText = ingredient.spreads + ", " + ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
-                    faves.appendChild(sandwichlist);
+            if (accounts[index].favoriteSandwiches.length > 0) {
+                var currentUser = accounts[index];
+                document.getElementById('add-user-name').innerText = "Hi, " + currentUser.username + ", welcome back! Would you like to order one of these faves?";
+                var faves = document.getElementById('fave-sandwiches');
+                for (var sandwichIndex = 0; sandwichIndex < currentUser.favoriteSandwiches.length; sandwichIndex++) {
+                    var sandwichlist = document.createElement('p');
+                    var ingredient = currentUser.favoriteSandwiches[sandwichIndex];
+                    if (ingredient.toppings == undefined) {
+                        sandwichlist.innerText = ingredient.spreads + " & " + ingredient.jams + " on " + ingredient.bread + " " + ingredient.isGrilled; 
+                        faves.appendChild(sandwichlist);
+                    } else if (ingredient.spreads == undefined) {
+                        sandwichlist.innerText = ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
+                        faves.appendChild(sandwichlist);
+                    } else if (ingredient.jams == undefined) {
+                        sandwichlist.innerText = ingredient.spreads + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
+                        faves.appendChild(sandwichlist);
+                    } else {
+                        sandwichlist.innerText = ingredient.spreads + ", " + ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
+                        faves.appendChild(sandwichlist);
+                    }
                 }
             }
+            
         }
     }
 }

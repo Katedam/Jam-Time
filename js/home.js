@@ -47,7 +47,6 @@ loadOrderPage = function(){
         document.getElementById('not-a-match').innerText = "Username or password does not match";
         } 
     } 
-    window.location.href = '../html/orderpage.html';
 } 
 getLoginButton.addEventListener("click", loadOrderPage);
 

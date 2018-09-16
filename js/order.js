@@ -8,16 +8,27 @@ function welcomeUser() {
 
 function loadUserName() {
 var user = localStorage.getItem('current login');
-for (var index = 0; index < accounts.length; index++) {
-     if (index == user) {
-        var currentUser = accounts[index];
-        document.getElementById('add-user-name').innerText = "Hi, " + currentUser.username + ", welcome back! Would you like to reorder one of your faves?";
-        var faves = document.getElementById('fave-sandwiches');
-        for (var sandwichIndex = 0; sandwichIndex < currentUser.favoriteSandwiches.length; sandwichIndex++) {
-            var sandwichlist = document.createElement('p');
-            var ingredient = currentUser.favoriteSandwiches[sandwichIndex];
-            sandwichlist.innerText = ingredient.spreads + ", " + ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
-            faves.appendChild(sandwichlist);
+    for (var index = 0; index < accounts.length; index++) {
+        if (index == user) {
+            var currentUser = accounts[index];
+            document.getElementById('add-user-name').innerText = "Hi, " + currentUser.username + ", welcome back! Would you like to reorder one of your faves?";
+            var faves = document.getElementById('fave-sandwiches');
+            for (var sandwichIndex = 0; sandwichIndex < currentUser.favoriteSandwiches.length; sandwichIndex++) {
+                var sandwichlist = document.createElement('p');
+                var ingredient = currentUser.favoriteSandwiches[sandwichIndex];
+                if (ingredient.toppings == undefined) {
+                    sandwichlist.innerText = ingredient.spreads + " & " + ingredient.jams + " on " + ingredient.bread + " " + ingredient.isGrilled; 
+                    faves.appendChild(sandwichlist);
+                } else if (ingredient.spreads == undefined) {
+                    sandwichlist.innerText = ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
+                    faves.appendChild(sandwichlist);
+                } else if (ingredient.jams == undefined) {
+                    sandwichlist.innerText = ingredient.spreads + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
+                    faves.appendChild(sandwichlist);
+                } else {
+                    sandwichlist.innerText = ingredient.spreads + ", " + ingredient.jams + ", " + "& " + ingredient.toppings + " on " + ingredient.bread + " " + ingredient.isGrilled; 
+                    faves.appendChild(sandwichlist);
+                }
             }
         }
     }
@@ -29,37 +40,47 @@ makeSandwich = function() {
     var checkedBread = document.getElementsByClassName('breads');
     for (var breadIndex = 0; breadIndex < checkedBread.length; breadIndex++) {
         if (checkedBread[breadIndex].checked == true) {
-            var breadChoice = checkedBread[breadIndex].value;
+            if (checkedBread[breadIndex].value !== undefined) {
+               var breadChoice = checkedBread[breadIndex].value; 
+            }
         } 
     }
     var checkedSpreads = document.getElementsByClassName('spreads');
     for (var spreadIndex = 0; spreadIndex < checkedSpreads.length; spreadIndex++) {
         if (checkedSpreads[spreadIndex].checked == true) {
-            var spreadChoice = checkedSpreads[spreadIndex].value;
+            if (checkedSpreads[spreadIndex].value !== undefined) {
+              var spreadChoice = checkedSpreads[spreadIndex].value;  
+            }
         } 
     }
     var checkedJams = document.getElementsByClassName('jams');
     for (var jamsIndex = 0; jamsIndex < checkedJams.length; jamsIndex++) {
         if (checkedJams[jamsIndex].checked == true) {
-            var jamsChoice = checkedJams[jamsIndex].value;
+            if (checkedJams[jamsIndex].value !== undefined) {
+               var jamsChoice = checkedJams[jamsIndex].value; 
+            }
         } 
     }
     var checkedExtras = document.getElementsByClassName('extras');
     for (var extrasIndex = 0; extrasIndex < checkedExtras.length; extrasIndex++) {
         if (checkedExtras[extrasIndex].checked == true) {
-            var extrasChoice = checkedExtras[extrasIndex].value;
+            if (checkedExtras[extrasIndex].value !== undefined) {
+               var extrasChoice = checkedExtras[extrasIndex].value; 
+            }
         } 
     }
     var checkedGrilled = document.getElementById('grilled');
         if (checkedGrilled.checked == true) {
-            var grilledChoice = "Grilled";
+            var grilledChoice = " - Grilled";
         } else {
             grilledChoice = "";
         }
     var checkedCut = document.getElementsByClassName('cuts');
     for (var cutIndex = 0; cutIndex < checkedCut.length; cutIndex++) {
         if (checkedCut[cutIndex].checked == true) {
-            var cutChoice = checkedCut[cutIndex].value;
+            if (checkedCut[cutIndex].value !== undefined) {
+               var cutChoice = checkedCut[cutIndex].value; 
+            }
         } 
     }
     var user = localStorage.getItem('current login');

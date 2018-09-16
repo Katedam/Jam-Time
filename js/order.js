@@ -65,6 +65,113 @@ var user = localStorage.getItem('current login');
 }
 window.onload = loadUserName();
 
+loadIngredients = function() {
+    var breadOptions = document.getElementById('breadIngredients');
+    // var inputAttributs = ['id', 'type', 'class', 'name', 'value'];
+    for (var i = 0; i < breads.length; i++) {
+        var str = breads[i];
+        var id = str.replace(/\s/g, '');
+        var label = document.createElement('label');
+        label.setAttribute('for', id);
+        label.innerText = breads[i];
+        breadOptions.appendChild(label);
+        console.log(label);
+        var input = document.createElement('input');
+        input.setAttribute('id', id);
+        input.setAttribute('class', 'breads');
+        input.setAttribute('type', 'radio');
+        input.setAttribute('name', 'breads');
+        input.setAttribute('value', breads[i]);
+        breadOptions.appendChild(input);
+        console.log(input);
+    }
+    var spreadOptions = document.getElementById('spreadIngredients');
+    for (var i = 0; i < spreads.length; i++) {
+        var str = spreads[i];
+        var id = str.replace(/\s/g, '');
+        var label = document.createElement('label');
+        label.setAttribute('for', id);
+        label.innerText = spreads[i];
+        spreadOptions.appendChild(label);
+        console.log(label);
+        var input = document.createElement('input');
+        input.setAttribute('id', id);
+        input.setAttribute('class', 'spreads');
+        input.setAttribute('type', 'radio');
+        input.setAttribute('name', 'spreads');
+        input.setAttribute('value', spreads[i]);
+        spreadOptions.appendChild(input);
+        console.log(input);
+    }
+    var jamOptions = document.getElementById('jamIngredients');
+    for (var i = 0; i < jams.length; i++) {
+        var str = jams[i];
+        var id = str.replace(/\s/g, '');
+        var label = document.createElement('label');
+        label.setAttribute('for', id);
+        label.innerText = jams[i];
+        jamOptions.appendChild(label);
+        console.log(label);
+        var input = document.createElement('input');
+        input.setAttribute('id', id);
+        input.setAttribute('class', 'jams');
+        input.setAttribute('type', 'radio');
+        input.setAttribute('name', 'jams');
+        input.setAttribute('value', jams[i]);
+        jamOptions.appendChild(input);
+        console.log(input);
+    }
+    var addOptions = document.getElementById('add-options');
+    for (var i = 0; i < toppings.length; i++) {
+        var str = toppings[i];
+        var id = str.replace(/\s/g, '');
+        var label = document.createElement('label');
+        label.setAttribute('for', id);
+        label.innerText = toppings[i];
+        addOptions.appendChild(label);
+        console.log(label);
+        var input = document.createElement('input');
+        input.setAttribute('id', id);
+        input.setAttribute('class', 'extras');
+        input.setAttribute('type', 'radio');
+        input.setAttribute('name', 'toppings');
+        input.setAttribute('value', toppings[i]);
+        addOptions.appendChild(input);
+        console.log(input);
+    }
+    var cutOptions = document.getElementById('add-cuts');
+    for (var i = 0; i < cuts.length; i++) {
+        var str = cuts[i];
+        var id = str.replace(/\s/g, '');
+        var label = document.createElement('label');
+        label.setAttribute('for', id);
+        label.innerText = cuts[i];
+        cutOptions.appendChild(label);
+        console.log(label);
+        var input = document.createElement('input');
+        input.setAttribute('id', id);
+        input.setAttribute('class', 'cuts');
+        input.setAttribute('type', 'radio');
+        input.setAttribute('name', 'cuts');
+        input.setAttribute('value', cuts[i]);
+        cutOptions.appendChild(input);
+        console.log(input);
+    }
+    var isGrilled = document.getElementById('add-grilled');
+    var label = document.createElement('label');
+    label.setAttribute('for', id);
+    label.innerText = "Grill it!"
+    isGrilled.appendChild(label);
+    var input = document.createElement('input');
+    input.setAttribute('id', 'grilled-choice');
+    input.setAttribute('class', 'grilled');
+    input.setAttribute('type', 'radio');
+    input.setAttribute('name', 'grilled');
+    input.setAttribute('value', 'Grilled');
+    isGrilled.appendChild(input);
+}
+window.onload = loadIngredients();
+
 var makeSammyButton = document.getElementById('makeSammy');
 makeSandwich = function() {
     var breadPicked = 0;
